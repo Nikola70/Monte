@@ -25,21 +25,54 @@
 
 /*SCROLLABLE IMAGES*/
 
-.image_gallery {
-    display: flex;
-    overflow-x: auto;                /* enable horizontal scrolling */
-    scroll-snap-type: x mandatory;   /* snap to each image */
-    -webkit-overflow-scrolling: touch; /* smooth on iOS */
-}
-
-.image_gallery img {
-    flex: 0 0 100%;                   /* each image fills the screen width */
-    scroll-snap-align: start;         /* align start of each image */
-    object-fit: cover;                /* crop nicely */
+/* Ensures the swiper container behaves like a standard image on mobile */
+.swiper {
     width: 100%;
     height: auto;
+    border-radius: 10px; /* Applies the standard border-radius from main img */
 }
 
+/* Ensures images inside the swiper slides take up the full container space */
+.swiper-slide .swiper_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Applies border-radius to the images inside the slider */
+}
+
+/* Desktop styles (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+
+    /* Swiper is inside the figure, so we target the swiper directly */
+    .card .swiper {
+        width: 50vw; /* Matches the width of .card img */
+        border-radius: 0; /* Remove mobile border-radius for desktop card layout */
+    }
+
+    /* Standard Double Room is the first .card (nth-child(odd)) */
+    .card:nth-child(odd) .swiper {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    /* This will be needed if another swiper card appears as an even child */
+    .card:nth-child(even) .swiper {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    /* Make sure the images inside the swiper also have the appropriate rounded corners */
+    .card:nth-child(odd) .swiper-slide .swiper_image {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .card:nth-child(even) .swiper-slide .swiper_image {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+}
 
 
 /* GENREAL STYLING */
@@ -475,7 +508,7 @@ form p {
         padding-top:0;
     }
 
-    .card img {
+    .card img{
         display: block;
         width: 50vw;
     }
