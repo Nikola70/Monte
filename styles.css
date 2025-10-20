@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+    --FONT-COLOR:black;
+    --BACKGROUND-COLOR: #F8F9FA;
+    --BORDER-COLOR: #2C3E50;
+    --PRIMARY-COLOR: #2C3E50;
+    --SECONDARY-COLOR: #D4A373;
+    --FF: 'Montserrat', sans-serif;
+}
+
+/*UTILITY*/
+
+.nowrap{
+    white-space: nowrap;
+}
+
+/*SCROLLABLE IMAGES*/
+
+.image_gallery {
+    display: flex;
+    overflow-x: auto;                /* enable horizontal scrolling */
+    scroll-snap-type: x mandatory;   /* snap to each image */
+    -webkit-overflow-scrolling: touch; /* smooth on iOS */
+}
+
+.image_gallery img {
+    flex: 0 0 100%;                   /* each image fills the screen width */
+    scroll-snap-align: start;         /* align start of each image */
+    object-fit: cover;                /* crop nicely */
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* GENREAL STYLING */
+
+html {
+    color: var(--FONT-COLOR);
+    font-family: var(--FF)
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--BACKGROUND-COLOR);
+}
+
+/* HEADER HEADER HEADER */
+
+
+/* HEADER-IMAGE*/
+
+header img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+/* HEADER-MENU*/
+
+.menu_button {
+    background-color: transparent;
+    border: none;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+}
+
+.menu_icon,
+.menu_icon::before,
+.menu_icon::after {
+    background-color: var(--BORDER-COLOR);
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.5s;    
+}
+
+.menu_icon::before,
+.menu_icon::after {
+    content: ""
+}
+
+.menu_icon::before {
+    transform: translate(0px, -12px)
+}
+.menu_icon::after {
+    transform: translate(0px, 12px)
+}
+
+#menu_toggle:checked + .menu_button .menu_icon {
+    background-color: transparent;
+}
+
+#menu_toggle:checked + .menu_button .menu_icon::before {
+    transform: rotate(45deg);
+}
+
+#menu_toggle:checked + .menu_button .menu_icon::after {
+    transform: rotate(-45deg);
+}
+
+/* Show the menu when checked */
+#menu_toggle:checked ~ .primary_nav {
+    display: block;
+}
+
+.primary_nav {
+    display: none;
+    transform-origin: top center;
+    animation: show_menu 0.5s ease forwards;
+}
+
+@keyframes show_menu {
+    0% {
+        transform: scaleX(0)
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.primary_nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 1vh;
+}
+
+.primary_nav li {
+    padding: 0.5rem;
+    border-top: 1px solid var(--BORDER-COLOR);
+    font-size: 1.2rem;
+}
+
+.primary_nav li:last-child {
+    border-bottom: 1px solid var(--BORDER-COLOR);
+}
+
+.primary_nav a { 
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.primary_nav a:any-link{
+    color: var(--FONT-COLOR);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover,
+a:focus {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+/* HEADER-RESERVATION-BUTTON*/
+
+.make_reservation{
+    margin:10px 10% 10px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 5px;
+    border:5px solid var(--BORDER-COLOR);
+    border-radius: 10px;
+    color: var(--FONT-COLOR);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/* MAIN-PAGE MAIN-PAGE */
+
+
+/* MAIN-GENERAL*/
+
+.main_page {
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN-VIDEO*/
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* MAIN-IMAGES*/
+
+main img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* MAIN-CARDS*/
+
+.card {
+    margin-top: 5vh;
+    padding-top: 2.5vh;
+    border-top: 5px solid var(--BORDER-COLOR);
+}
+
+.card a{
+    text-decoration: none;
+    color: var(--FONT-COLOR);
+}
+
+.card a:hover{
+    opacity: 0.5;
+}
+
+.card:first-child {
+    margin-top: 5vh;
+    padding-top: 2.5vh;
+    border-top: 10px double var(--BORDER-COLOR);
+}
+
+.card p{
+    margin: 2vh 0.3rem 2vh 0.3rem;
+    text-align: center;
+}
+
+.card h2{
+    text-align: center;
+}
+
+/* FOOTER FOOTER FOOTER */
+
+footer {
+    display: grid;
+    grid-template-areas: 
+        "header social"
+        "contact social"
+        "author author";
+    margin-top: 10vh;
+    border-top: 5px solid var(--BORDER-COLOR);
+    padding: 0.6rem;
+    position: relative;
+}
+
+/* LIST */
+
+footer ul {
+    list-style-type: none;
+    padding-bottom: 1rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--FONT-COLOR);
+}
+
+/*SOCIAL MEDIA LINKS*/
+
+.social_media {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding-right: 2rem;
+    font-size: 2rem;
+}
+
+.social_media i {
+    color: var(--BORDER-COLOR)
+}
+
+/*AUTHOR THING*/
+
+footer p{
+    grid-area: author;
+    padding:0.5rem;
+    border-top: 3px solid var(--BORDER-COLOR);
+    border-bottom: 3px solid var(--BORDER-COLOR);
+}
+
+/* GENERAL INITIAL CARD STYLE FOR SECONDARY PAGES */
+
+.initial_card {
+    border-top: 10px double var(--BORDER-COLOR);
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+.initial_card h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* SUBMISSION FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    border-top: 5px solid var(--BORDER-COLOR);
+}
+
+form h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem
+}
+
+form p {
+    margin: 1rem;
+}
+
+@media screen and (min-width: 630px){
+
+    /*REMOVING MENU ICON */
+
+    .menu_button {
+        display: none;
+    }
+
+    .menu_icon,
+    .menu_icon::before,
+    .menu_icon::after {
+        display: none;
+    }
+
+    /*HEADER*/
+    
+    /*LOGO*/
+
+    header img {
+        display: block;
+        width: 300px;
+        height: auto;
+        margin: 0 auto; 
+        position: relative;
+    }
+
+    /* HEADER-RESERVATION-BUTTON*/
+
+    .make_reservation:any-link{
+        position: absolute;
+        top: 50px;
+        right: 0vw;
+        margin: 0;
+        z-index: 1;
+        display: block;
+    }
+
+    /*NAVIGATION*/
+
+    .primary_nav {
+        display: block;
+        border-top: 5px solid var(--BORDER-COLOR);
+        border-bottom: 5px solid var(--BORDER-COLOR);
+        border-radius: 5px;
+    }
+
+    .primary_nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin: 0;
+} 
+
+    .primary_nav li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        border-top: 0;
+        border-right: 2px solid var(--BORDER-COLOR);
+    }
+    .primary_nav li:last-child{
+        border-bottom:0;
+        border-right:0;
+    }
+
+    .primary_nav a { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+}
+
+@media screen and (min-width: 670px){
+
+    /* CHANGING RESERVATION BUTTON */
+
+    .make_reservation:any-link{
+        right: 2vw;
+    }
+}
+@media screen and (min-width: 768px){
+
+    /* CHANGING RESERVATION BUTTON */
+
+    .make_reservation:any-link{
+        right: 4vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*CHANGING CARD STYLES */
+
+    .card {
+        padding: 0;
+    }
+
+    .card h2 {
+        padding: 1vh;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+
+    .card:nth-child(odd){
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90%;
+        border-top: 3px solid var(--BORDER-COLOR);
+        border-right: 3px solid var(--BORDER-COLOR);
+        border-top-right-radius: 10px;
+        margin-top:10vh;
+    }
+
+    .card:nth-child(odd) img{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .card:nth-child(even) {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        border-top: 3px solid var(--BORDER-COLOR);
+        border-left: 3px solid var(--BORDER-COLOR);
+        border-top-left-radius: 10px;
+        margin: 10vh 0 0 auto; /* Push to right edge */
+    }
+    
+    .card:nth-child(even) img{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .card:first-child {
+        margin-top: 5vh;
+        padding-top:0;
+    }
+
+    .card img {
+        display: block;
+        width: 50vw;
+    }
+
+    /* GENERAL INITIAL CARD STYLE FOR SECONDARY PAGES */
+
+    .initial_card {
+        border-bottom: 10px double var(--BORDER-COLOR);
+        padding: 1rem 1rem 2rem 1rem;
+}   
+
+    .initial_card p {
+        font-size: 1.5rem;
+    }
+
+    .about_card p,
+    .gudauri_card p,
+    .events_card p,
+    .restaurant_card p,
+    .services_card p {
+        text-align: left;
+    }
+
+    /*CONTACT PAGE */
+
+    form {
+        border-top: none;
+    }
+
+}
+
+/*DARK MODE */
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+    --FONT-COLOR:white;
+    --BACKGROUND-COLOR: rgb(56, 55, 55);
+    --BORDER-COLOR: white;
+    --FF: Arial, Helvetica, sans-serif;
+    
+    }
+
+    .make_reservation{
+        border:3px solid var(--BORDER-COLOR);
+    }
+
+    .primary_nav {
+        border-top: 3px solid var(--BORDER-COLOR);
+    }
+
+
+
+} */
