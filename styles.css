@@ -40,6 +40,17 @@
     border-radius: 10px; /* Applies border-radius to the images inside the slider */
 }
 
+/* Swiper Navigation Arrows (Prev/Next) */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--FONT-COLOR) !important; /* Set arrow color to black (FONT-COLOR variable) */
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet-active {
+    background: var(--FONT-COLOR) !important; /* Set active dot background to black (FONT-COLOR variable) */
+}
+
 /* Desktop styles (min-width: 1024px) */
 @media screen and (min-width: 1024px) {
 
