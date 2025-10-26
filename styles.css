@@ -372,9 +372,21 @@ form h2 {
     margin-top: 1rem
 }
 
-form p {
+.form_label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
 }
+form input,
+form textarea {
+    border: 1px solid var(--BORDER-COLOR);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
 
 @media screen and (min-width: 630px){
 
@@ -529,17 +541,13 @@ form p {
     .initial_card {
         border-bottom: 10px double var(--BORDER-COLOR);
         padding: 1rem 1rem 2rem 1rem;
-}   
+    }   
 
     .initial_card p {
         font-size: 1.5rem;
     }
 
-    .about_card p,
-    .gudauri_card p,
-    .events_card p,
-    .restaurant_card p,
-    .services_card p {
+    .initial_card p {
         text-align: left;
     }
 
@@ -548,8 +556,17 @@ form p {
     form {
         border-top: none;
     }
-
+    .form_label {
+        font-size: 1.3rem;
+    }
+    input {
+        height: 1.8rem;
+        width: 10vw;
+        margin: 5px;
+        padding: 10px;
+    }
 }
+
 
 /*DARK MODE */
 
