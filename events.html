@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/logo_monte_697_331.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -60,10 +61,25 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img class="card_image" src="images/deluxe_1_1024_683.jpg" alt="Deluxe room">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides --> 
+                            <div class="swiper-slide"><img class="swiper_image" src="images/Events/Wedding/wedding_1.jpg" alt="Superior family room"></div>
+                            <div class="swiper-slide"><img class="swiper_image" src="images/Events/Wedding/wedding_3.jpg" alt="Superior family room"></div>
+                            <div class="swiper-slide"><img class="swiper_image" src="images/Events/Wedding/wedding_2.jpg" alt="Superior family room"></div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                 </figure>
             </section>
-            <section class="card" id="restaurant">
+            <section class="card" id="services">
                 <div class="card_text">
                     <h2>New Year's Event</h2>
                     <p>
@@ -71,7 +87,7 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img class="card_image" src="images/deluxe_1_1024_683.jpg" alt="Deluxe room">
+                    <img class="card_image" src="images/Events/New_Year/new_year_1.jpg" alt="Deluxe room">
                 </figure>
             </section>
             <section class="card" id="services">
@@ -82,7 +98,7 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img class="card_image" src="images/deluxe_1_1024_683.jpg" alt="Deluxe room">
+                    <img class="card_image" src="images/Events/Corporate/corporat_1.jpeg" alt="Deluxe room">
                 </figure>
             </section>
         </article>
@@ -108,5 +124,25 @@
         </nav>
         <p>&copy NN; All Rights Reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+    
+      loop: true,
+    
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    
+    });
+    </script>
 </body>
 </html>

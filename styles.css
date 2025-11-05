@@ -490,7 +490,8 @@ form textarea {
         padding: 1vh;
     }
 
-    .card p {
+    .card p,
+    footer{
         font-size: 1.2rem;
         margin: 1rem;
     }
