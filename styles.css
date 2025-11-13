@@ -385,6 +385,32 @@ form textarea {
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
+    width: clamp(170px, 20vw, 300px);
+    height: 40px;
+    font-size: 1rem;
+}
+
+form select {
+    border: 1px solid var(--BORDER-COLOR);
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px;
+    width: clamp(170px, 20vw, 300px);
+    font-size: 1rem;
+}
+
+form button {
+    font-size: 1.2rem;
+    border: 1px solid var(--BORDER-COLOR);
+    border-radius: 5px;
+    height: 1.8rem;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(170px, 20vw, 300px);
 }
 
 
@@ -559,12 +585,6 @@ form textarea {
     }
     .form_label {
         font-size: 1.3rem;
-    }
-    input {
-        height: 1.8rem;
-        width: 10vw;
-        margin: 5px;
-        padding: 10px;
     }
 }
 
