@@ -44,30 +44,63 @@
                 </p>
         </section>
         <section class="contact_form">
-            <form action="" method="get">
+            <form onsubmit="sendMail(event)">
                 <h2>Please fill out the following information and we will contact you</h2>
+              
                 <span class="form_label">
-                    <label for="first_name">First Name: </label>
-                    <input type="text" name="first_name" id="first_name" autocomplete="on">
+                  <label for="first_name">First Name * </label>
+                  <input type="text" name="first_name" id="first_name" autocomplete="on" required>
                 </span>
+              
                 <span class="form_label">
-                    <label for="last_name">Last Name: </label>
-                    <input type="text" name="last_name" id="last_name" autocomplete="on">
+                  <label for="last_name">Last Name * </label>
+                  <input type="text" name="last_name" id="last_name" autocomplete="on" required>
                 </span>
+              
                 <span class="form_label">
-                    <label for="phone">Phone Number: </label>
-                    <input type="tel" name="phone" id="phone" autocomplete="on">
+                  <label for="phone">Phone Number: </label>
+                  <input type="tel" name="phone" id="phone" autocomplete="on">
                 </span>
+              
                 <span class="form_label">
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email" autocomplete="on">
+                  <label for="email">Email * </label>
+                  <input type="email" name="email" id="email" autocomplete="on" required>
                 </span>
+              
+                <!-- 🏨 Check-in / Check-out -->
                 <span class="form_label">
-                    <label for="message">Your Message: </label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Check-in/check-out date,  number of guests, preferred room type..."></textarea>
+                  <label for="checkin">Check-in Date </label>
+                  <input type="date" name="checkin" id="checkin">
                 </span>
+              
+                <span class="form_label">
+                  <label for="checkout">Check-out Date </label>
+                  <input type="date" name="checkout" id="checkout">
+                </span>
+              
+                <!-- 🛏️ Room Category -->
+                <span class="form_label">
+                  <label for="room_category">Preferred Room Category </label>
+                  <select name="room_category" id="room_category">
+                    <option value="">-- Select a Room --</option>
+                    <option value="standard_double">Standard Double/Twin</option>
+                    <option value="large_double">Large Double/Twin</option>
+                    <option value="superior_double">Superior Double/Twin</option>
+                    <option value="deluxe_double">Deluxe Double/Twin</option>
+                    <option value="triple">Triple</option>
+                    <option value="standard_family">Standard Family</option>
+                    <option value="superior_family">Superior Family</option>
+                  </select>
+                </span>
+              
+                <span class="form_label">
+                  <label for="message">Your Message </label>
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Special requests, arrival time, etc."></textarea>
+                </span>
+              
                 <button type="submit">Submit</button>
-            </form>
+              </form>
+              
         </section>
     <footer>
         <h3>Our Contact Information:</h3>
@@ -90,5 +123,33 @@
         </nav>
         <p>&copy NN; All Rights Reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("-_HuO7oyBMYLQdjww");
+    
+      function sendMail(event) {
+        event.preventDefault();
+    
+        emailjs.sendForm('service_2dx6jcp', 'template_96wouwi', event.target)
+        .then(() => {
+            alert('Message sent successfully!');
+            event.target.reset();
+        })
+          .catch((error) => alert('Failed to send message: ' + error.text));
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('input[type="date"]').forEach((dateInput) => {
+          const openPicker = () => {
+            if (typeof dateInput.showPicker === 'function') {
+              dateInput.showPicker();
+            }
+          };
+
+          dateInput.addEventListener('click', openPicker);
+          dateInput.addEventListener('focus', openPicker);
+        });
+      });
+    </script>
 </body>
 </html>
