@@ -116,11 +116,24 @@ header img {
 
 /* LANGUAGE SELECTOR */
 
+.sr-only,
+.language-current-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .language-selector {
     position: absolute;
-    top: 8px;
+    top: 6px;
     right: 8px;
-    z-index: 2;
+    z-index: 5;
 }
 
 .language-selector summary {
@@ -134,66 +147,164 @@ header img {
 .language-summary {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
-    padding: 4px 8px;
+    gap: 0.4rem;
+    min-height: 44px;
+    padding: 0 12px;
     border-radius: 999px;
-    border: 1px solid var(--BORDER-COLOR);
+    border: 2px solid var(--BORDER-COLOR);
     background-color: #ffffff;
+    color: var(--PRIMARY-COLOR);
     cursor: pointer;
     font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-.language-summary:focus {
-    outline: 2px solid var(--SECONDARY-COLOR);
+.language-summary::after {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.2s;
+}
+
+.language-selector[open] .language-summary::after {
+    transform: translateY(1px) rotate(-135deg);
+}
+
+.language-summary:hover,
+.language-selector[open] .language-summary {
+    background-color: var(--PRIMARY-COLOR);
+    color: #ffffff;
+}
+
+.language-summary:focus-visible,
+.language-option:focus-visible {
+    outline: 3px solid var(--SECONDARY-COLOR);
     outline-offset: 2px;
 }
 
-.language-current-flag {
-    font-size: 1.1rem;
+.language-globe {
+    width: 20px;
+    height: 20px;
+    flex: none;
 }
 
-.language-current-label {
-    display: none; /* Only show the flag by default on all screen sizes */
+.language-current-code {
+    letter-spacing: 0.04em;
 }
 
 .language-menu {
     position: absolute;
     right: 0;
-    margin-top: 4px;
-    padding: 4px;
-    border-radius: 8px;
-    border: 1px solid var(--BORDER-COLOR);
+    margin-top: 6px;
+    padding: 6px;
+    list-style: none;
+    min-width: 11rem;
+    border-radius: 12px;
+    border: 2px solid var(--BORDER-COLOR);
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    display: none;
-    min-width: 140px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: language_menu_in 0.15s ease-out;
 }
 
-.language-selector[open] .language-menu {
-    display: block;
+@keyframes language_menu_in {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .language-option {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    width: 100%;
-    padding: 4px 6px;
-    border-radius: 4px;
+    gap: 0.7rem;
+    min-height: 44px;
+    padding: 0 10px;
+    border-radius: 8px;
     text-decoration: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--FONT-COLOR);
 }
 
 .language-option:hover,
 .language-option:focus {
-    background-color: #f0f0f0;
+    background-color: #f0ebe4;
+    transform: none; /* cancel the global a:hover scale */
 }
 
-.language-flag {
-    font-size: 1.1rem;
+.language-option[aria-current="true"] {
+    font-weight: 700;
+    background-color: #f7efe5;
+}
+
+.language-option[aria-current="true"]::after {
+    content: "";
+    width: 0.35rem;
+    height: 0.7rem;
+    margin-left: auto;
+    border-right: 2px solid var(--SECONDARY-COLOR);
+    border-bottom: 2px solid var(--SECONDARY-COLOR);
+    transform: rotate(45deg);
+}
+
+.language-option-code {
+    flex: none;
+    width: 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--PRIMARY-COLOR);
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 480px) {
+    .language-current-code {
+        display: none;
+    }
+
+    .language-current-label {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+}
+
+@media screen and (min-width: 630px) {
+    /* the hamburger is gone on wide screens, so the selector sits top left */
+    .language-selector {
+        top: 20px;
+        left: 12px;
+        right: auto;
+    }
+
+    .language-menu {
+        left: 0;
+        right: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .language-menu {
+        animation: none;
+    }
+
+    .language-summary,
+    .language-summary::after {
+        transition: none;
+    }
 }
 
 /* HEADER-MENU*/
@@ -673,27 +784,6 @@ form button {
     }
     .form_label {
         font-size: 1.3rem;
-    }
-}
-
-@media screen and (min-width: 630px) {
-    /* LANGUAGE SELECTOR ON DESKTOP */
-    .language-selector {
-        top: 20px;
-        left: 10px;
-        right: auto;
-    }
-
-    /* On wider screens show language names inside the dropdown menu */
-    .language-menu .language-label {
-        display: inline;
-    }
-}
-
-@media screen and (max-width: 629px) {
-    /* On small screens show only flags in the dropdown menu */
-    .language-menu .language-label {
-        display: none;
     }
 }
 

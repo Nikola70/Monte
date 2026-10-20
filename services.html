@@ -44,27 +44,27 @@
         <img src="images/logo_monte_697_331.png" alt="Hotel Monte Logo">
         <a class="make_reservation" href="./contact">Make A Reservation</a>
     </section>
-    <details class="language-selector" aria-label="Language selector">
-        <summary>
-            <span class="language-summary">
-                <span class="language-current-flag" aria-hidden="true">🇺🇸</span>
-                <span class="language-current-label">English</span>
-            </span>
+    <details class="language-selector">
+        <summary class="language-summary">
+            <svg class="language-globe" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="sr-only">Language:</span>
+            <span class="language-current-code" aria-hidden="true">EN</span>
+            <span class="language-current-label">English</span>
         </summary>
-        <div class="language-menu">
-            <a href="/services" class="language-option" lang="en" hreflang="en" aria-current="true">
-                <span class="language-flag" aria-hidden="true">🇺🇸</span>
+        <ul class="language-menu">
+            <li><a href="/services" class="language-option" lang="en" hreflang="en" aria-current="true">
+                <span class="language-option-code" aria-hidden="true">EN</span>
                 <span class="language-label">English</span>
-            </a>
-            <a href="/ka/services" class="language-option" lang="ka" hreflang="ka">
-                <span class="language-flag" aria-hidden="true">🇬🇪</span>
+            </a></li>
+            <li><a href="/ka/services" class="language-option" lang="ka" hreflang="ka">
+                <span class="language-option-code" aria-hidden="true">KA</span>
                 <span class="language-label">ქართული</span>
-            </a>
-            <a href="/ru/services" class="language-option" lang="ru" hreflang="ru">
-                <span class="language-flag" aria-hidden="true">🇷🇺</span>
+            </a></li>
+            <li><a href="/ru/services" class="language-option" lang="ru" hreflang="ru">
+                <span class="language-option-code" aria-hidden="true">RU</span>
                 <span class="language-label">Русский</span>
-            </a>
-        </div>
+            </a></li>
+        </ul>
     </details>
         <input type="checkbox" id="menu_toggle" hidden>
         <label for="menu_toggle" class="menu_button" aria-label="Open navigation menu">
@@ -212,5 +212,6 @@
     
     });
     </script>
+    <script src="/language-switcher.js" defer></script>
 </body>
 </html>
