@@ -307,6 +307,13 @@ header img {
     }
 }
 
+/* Below 630px the menu button and language selector sit on top of the logo, so push it down */
+@media screen and (max-width: 629px) {
+    header img {
+        margin-top: 44px;
+    }
+}
+
 /* HEADER-MENU*/
 
 .menu_button {
