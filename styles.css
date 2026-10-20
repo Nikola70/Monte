@@ -569,12 +569,17 @@ form {
     justify-content: space-between;
     align-items: center;
     margin: 1rem;
-    border-top: 5px solid var(--BORDER-COLOR);
+    padding: 0.5rem 1rem 1.5rem;
+    border: 2px solid var(--BORDER-COLOR);
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 form h2 {
     margin-bottom: 1rem;
-    margin-top: 1rem
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .form_label {
@@ -584,6 +589,7 @@ form h2 {
     justify-content: center;
     margin: 1rem;
 }
+
 form input,
 form textarea {
     border: 1px solid var(--BORDER-COLOR);
@@ -593,6 +599,11 @@ form textarea {
     width: clamp(170px, 20vw, 300px);
     height: 40px;
     font-size: 1rem;
+    font-family: inherit;
+}
+
+form textarea {
+    resize: vertical;
 }
 
 form select {
@@ -602,13 +613,27 @@ form select {
     margin: 5px;
     width: clamp(170px, 20vw, 300px);
     font-size: 1rem;
+    font-family: inherit;
+}
+
+form input:focus-visible,
+form textarea:focus-visible,
+form select:focus-visible {
+    outline: 3px solid var(--SECONDARY-COLOR);
+    outline-offset: 1px;
+    border-color: var(--SECONDARY-COLOR);
 }
 
 form button {
     font-size: 1.2rem;
-    border: 1px solid var(--BORDER-COLOR);
-    border-radius: 5px;
-    height: 1.8rem;
+    font-family: inherit;
+    font-weight: 700;
+    border: 2px solid var(--PRIMARY-COLOR);
+    border-radius: 8px;
+    background-color: var(--PRIMARY-COLOR);
+    color: #ffffff;
+    cursor: pointer;
+    height: 2.6rem;
     margin: 5px;
     padding: 10px;
     text-align: center;
@@ -616,6 +641,60 @@ form button {
     align-items: center;
     justify-content: center;
     width: clamp(170px, 20vw, 300px);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+form button:hover,
+form button:focus-visible {
+    background-color: #ffffff;
+    color: var(--PRIMARY-COLOR);
+}
+
+/* Wide screens: two-column form */
+@media screen and (min-width: 768px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem 2rem;
+        align-items: start;
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 1rem 2.5rem 2rem;
+    }
+
+    form h2,
+    form .form_label:nth-of-type(7),
+    form .form_label:nth-of-type(8),
+    form button {
+        grid-column: 1 / -1;
+    }
+
+    form .form_label {
+        align-items: stretch;
+        margin: 0.5rem 0;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        width: 100%;
+        margin: 5px 0 0;
+    }
+
+    form input,
+    form select {
+        height: 44px;
+    }
+
+    form textarea {
+        height: 9rem;
+    }
+
+    form button {
+        justify-self: center;
+        width: 16rem;
+        margin-top: 1rem;
+    }
 }
 
 
@@ -786,11 +865,8 @@ form button {
 
     /*CONTACT PAGE */
 
-    form {
-        border-top: none;
-    }
     .form_label {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 }
 
