@@ -14,7 +14,7 @@
     --BORDER-COLOR: #2C3E50;
     --PRIMARY-COLOR: #2C3E50;
     --SECONDARY-COLOR: #D4A373;
-    --FF: 'Montserrat', sans-serif;
+    --FF: 'Montserrat', 'Noto Sans Georgian', sans-serif;
 }
 
 /*UTILITY*/
@@ -22,6 +22,8 @@
 .nowrap{
     white-space: nowrap;
 }
+
+
 
 /*SCROLLABLE IMAGES*/
 
@@ -100,6 +102,9 @@ body {
 
 /* HEADER HEADER HEADER */
 
+header {
+    position: relative;
+}
 
 /* HEADER-IMAGE*/
 
@@ -107,6 +112,88 @@ header img {
     width: 100%;
     height: auto;
     padding: 10px;
+}
+
+/* LANGUAGE SELECTOR */
+
+.language-selector {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+}
+
+.language-selector summary {
+    list-style: none;
+}
+
+.language-selector summary::-webkit-details-marker {
+    display: none;
+}
+
+.language-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--BORDER-COLOR);
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.language-summary:focus {
+    outline: 2px solid var(--SECONDARY-COLOR);
+    outline-offset: 2px;
+}
+
+.language-current-flag {
+    font-size: 1.1rem;
+}
+
+.language-current-label {
+    display: none; /* Only show the flag by default on all screen sizes */
+}
+
+.language-menu {
+    position: absolute;
+    right: 0;
+    margin-top: 4px;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--BORDER-COLOR);
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    display: none;
+    min-width: 140px;
+}
+
+.language-selector[open] .language-menu {
+    display: block;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 4px 6px;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--FONT-COLOR);
+}
+
+.language-option:hover,
+.language-option:focus {
+    background-color: #f0f0f0;
+}
+
+.language-flag {
+    font-size: 1.1rem;
 }
 
 /* HEADER-MENU*/
@@ -415,6 +502,7 @@ form button {
 
 
 @media screen and (min-width: 630px){
+    
 
     /*REMOVING MENU ICON */
 
@@ -588,6 +676,26 @@ form button {
     }
 }
 
+@media screen and (min-width: 630px) {
+    /* LANGUAGE SELECTOR ON DESKTOP */
+    .language-selector {
+        top: 20px;
+        left: 10px;
+        right: auto;
+    }
+
+    /* On wider screens show language names inside the dropdown menu */
+    .language-menu .language-label {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 629px) {
+    /* On small screens show only flags in the dropdown menu */
+    .language-menu .language-label {
+        display: none;
+    }
+}
 
 /*DARK MODE */
 
