@@ -547,6 +547,126 @@ footer p{
     border-bottom: 3px solid var(--BORDER-COLOR);
 }
 
+/* TERMS AND POLICY PAGE */
+
+.footer_terms_link {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.initial_card.terms_card {
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.terms_card h1 {
+    text-align: center;
+}
+
+.terms_card h2 {
+    margin: 2rem 0 0.8rem;
+    padding-top: 1rem;
+    border-top: 3px solid var(--BORDER-COLOR);
+    font-size: 1.5rem;
+}
+
+.terms_card h3 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.15rem;
+    color: var(--PRIMARY-COLOR);
+}
+
+.terms_card h4 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+}
+
+.terms_card p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.terms_card ul,
+.terms_card ol {
+    margin: 0 0 0.8rem 1.5rem;
+    line-height: 1.6;
+}
+
+.terms_card ol.terms_alpha {
+    list-style: none;
+    margin-left: 0.5rem;
+}
+
+.terms_marker {
+    font-weight: 700;
+}
+
+.terms_details {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--SECONDARY-COLOR);
+    border-radius: 8px;
+    background-color: #f7efe5;
+    line-height: 1.7;
+}
+
+.terms_details dt {
+    display: inline;
+    font-weight: 700;
+}
+
+.terms_details dd {
+    display: inline;
+    margin: 0;
+}
+
+.terms_details a {
+    color: var(--PRIMARY-COLOR);
+}
+
+.terms_table_wrap {
+    margin-bottom: 1rem;
+    overflow-x: auto;
+}
+
+.terms_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.terms_table th,
+.terms_table td {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--BORDER-COLOR);
+    text-align: left;
+    vertical-align: top;
+}
+
+.terms_table th {
+    background-color: var(--PRIMARY-COLOR);
+    color: #ffffff;
+}
+
+.terms_table tbody tr:nth-child(even) {
+    background-color: #f0ebe4;
+}
+
+@media screen and (max-width: 480px) {
+    .terms_table {
+        font-size: 0.8rem;
+    }
+
+    .terms_table th,
+    .terms_table td {
+        padding: 0.4rem 0.4rem;
+    }
+}
+
 /* GENERAL INITIAL CARD STYLE FOR SECONDARY PAGES */
 
 .initial_card {

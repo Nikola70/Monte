@@ -168,4 +168,25 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://montegudauri.com/ru/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://montegudauri.com/contact"/>
   </url>
+  <url>
+    <loc>https://montegudauri.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://montegudauri.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://montegudauri.com/ka/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://montegudauri.com/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://montegudauri.com/terms"/>
+  </url>
+  <url>
+    <loc>https://montegudauri.com/ka/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://montegudauri.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://montegudauri.com/ka/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://montegudauri.com/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://montegudauri.com/terms"/>
+  </url>
+  <url>
+    <loc>https://montegudauri.com/ru/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://montegudauri.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://montegudauri.com/ka/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://montegudauri.com/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://montegudauri.com/terms"/>
+  </url>
 </urlset>
