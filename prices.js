@@ -3,6 +3,8 @@
 (function (root) {
     // Percentage added on top of the rate sheet prices.
     const MARKUP_PERCENT = 15;
+    // Nights before this date are priced exactly as in the rate sheet, with no markup.
+    const MARKUP_FROM = '2026-12-20';
 
     // Each night is priced by the season its date falls in (both ends inclusive).
     const SEASONS = [
@@ -40,7 +42,8 @@
     function nightPrice(room, iso) {
         const rates = RATES[room];
         const i = seasonIndex(iso);
-        return rates && i !== -1 ? withMarkup(rates[i]) : null;
+        if (!rates || i === -1) return null;
+        return iso < MARKUP_FROM ? rates[i] : withMarkup(rates[i]);
     }
 
     function addDays(iso, n) {
@@ -71,7 +74,7 @@
         return prices.length ? Math.min.apply(null, prices) : null;
     }
 
-    const api = { MARKUP_PERCENT, SEASONS, RATES, nightPrice, stayTotal, fromPrice, addDays };
+    const api = { MARKUP_PERCENT, MARKUP_FROM, SEASONS, RATES, nightPrice, stayTotal, fromPrice, addDays };
     if (typeof module !== 'undefined' && module.exports) {
         module.exports = api;
     } else {
