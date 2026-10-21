@@ -347,7 +347,6 @@ PLACES = [
     ),
     dict(
         id="rock-arsha", area="n", ll=(42.631573, 44.610256), season="Y", hike=1, time="5 min", cost="P",
-        links=[("Climbing in Georgia", "https://climbinggeorgia.wordpress.com/")], links_label="more_info",
         name=("Rock Climbing in Arsha", "კლდეზე ცოცვა არშაში", "Скалолазание в Арше"),
         desc=("A sport-climbing crag near the village of Arsha with roughly 25 to 50 bolted routes from easy to hard (about 5a to 7a), up to about 30 m high, on south-facing rock at around 1,850 m. The approach is about 5 minutes uphill.",
               "სპორტული სკალოდრომი სოფელ არშასთან — დაახლოებით 25–50 დაბოლტილი მარშრუტი სხვადასხვა სირთულის (დაახლოებით 5a–7a), სიმაღლით დაახლოებით 30 მ-მდე, სამხრეთისკენ მიმართულ კლდეზე, დაახლოებით 1 850 მ სიმაღლეზე. მიახლოება დაახლოებით 5 წუთია აღმართზე.",
@@ -361,7 +360,6 @@ PLACES = [
     ),
     dict(
         id="rock-gveleti", area="n", ll=(42.7123027, 44.6233233), season="S", hike=0, cost="P",
-        links=[("Climbing in Georgia", "https://climbinggeorgia.wordpress.com/")], links_label="more_info",
         name=("Rock Climbing in Gveleti", "კლდეზე ცოცვა გველეთში", "Скалолазание в Гвелети"),
         desc=("A sport-climbing crag near the Gveleti waterfalls with bolted routes about 22 to 28 m long, graded around 6a to 6a+. The rock is in the shade from about 13:00, which makes it a good choice for hot summer days. The walk from the parking spot is only about 50 m.",
               "სპორტული სკალოდრომი გველეთის ჩანჩქერებთან — დაბოლტილი მარშრუტები დაახლოებით 22–28 მ სიგრძისა, სირთულით დაახლოებით 6a–6a+. კლდე დაახლოებით 13:00 საათიდან ჩრდილშია, ამიტომ ცხელი ზაფხულის დღეებისთვის კარგი არჩევანია. ავტოსადგომიდან მხოლოდ დაახლოებით 50 მ-ის სავალია.",
