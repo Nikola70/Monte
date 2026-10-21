@@ -605,6 +605,13 @@ footer p{
     font-weight: 700;
 }
 
+.terms_card .info_hours {
+    margin-top: -0.2rem;
+    padding: 0.3rem 0.7rem;
+    border-left: 4px solid var(--SECONDARY-COLOR);
+    background-color: #f7efe5;
+}
+
 .terms_details {
     padding: 0.8rem 1rem;
     border: 1px solid var(--SECONDARY-COLOR);
