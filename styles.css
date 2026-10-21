@@ -42,6 +42,13 @@
     border-radius: 10px; /* Applies border-radius to the images inside the slider */
 }
 
+/* Portrait photos: show the whole photo inside the same 3:2 frame as the landscape ones */
+.swiper-slide .swiper_image.swiper_image_portrait {
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    background-color: var(--BACKGROUND-COLOR);
+}
+
 /* Swiper Navigation Arrows (Prev/Next) */
 .swiper-button-next,
 .swiper-button-prev {
