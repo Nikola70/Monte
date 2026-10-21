@@ -31,6 +31,7 @@
     <meta property="og:locale:alternate" content="ru_RU">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
     <link rel="icon" href="/images/logo_monte_697_331.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,6 +94,8 @@
         <section class="contact_form">
             <form onsubmit="sendMail(event)">
                 <input type="hidden" name="language" value="Georgian">
+                <input type="hidden" name="nights" value="">
+                <input type="hidden" name="estimated_total" value="">
                 <h2>გთხოვთ, შეავსოთ ქვემოთ მოცემული ინფორმაცია და ჩვენ დაგიკავშირდებით</h2>
               
                 <span class="form_label">
@@ -142,6 +145,8 @@
                   </select>
                 </span>
               
+                <div class="estimate_box" id="estimate" aria-live="polite" hidden></div>
+
                 <span class="form_label">
                   <label for="message">თქვენი შეტყობინება </label>
                   <textarea name="message" id="message" cols="30" rows="10" placeholder="ნებისმიერი დამატებითი ინფორმაცია ან კითხვა"></textarea>
@@ -173,6 +178,10 @@
         <p>&copy; სასტუმრო მონტე. ყველა უფლება დაცულია.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ka.js"></script>
+    <script src="/prices.js"></script>
+    <script src="/booking-calendar.js"></script>
     <script>
       emailjs.init("-_HuO7oyBMYLQdjww");
     
