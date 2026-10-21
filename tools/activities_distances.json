@@ -1,0 +1,130 @@
+{
+ "ananuri": {
+  "km": 57.1,
+  "min": 58
+ },
+ "pasanauri": {
+  "km": 34.1,
+  "min": 33
+ },
+ "rafting": {
+  "km": 32.2,
+  "min": 30
+ },
+ "khada": {
+  "km": 18.7,
+  "min": 19
+ },
+ "lomisa": {
+  "km": 13.9,
+  "min": 15
+ },
+ "tsetskhlisjvari": {
+  "km": 6.4,
+  "min": 9
+ },
+ "skiing": {
+  "km": 0.9,
+  "min": 1
+ },
+ "lessons": {
+  "km": 0.9,
+  "min": 1
+ },
+ "freeride": {
+  "km": 0.9,
+  "min": 1
+ },
+ "heliski": {
+  "km": 0.9,
+  "min": 1
+ },
+ "snowmobile": {
+  "km": 0.9,
+  "min": 1
+ },
+ "paragliding": {
+  "km": 4.2,
+  "min": 5
+ },
+ "gondola": {
+  "km": 2.1,
+  "min": 11
+ },
+ "mtb": {
+  "km": 2.1,
+  "min": 11
+ },
+ "sadzele": {
+  "km": 0.0,
+  "min": 0
+ },
+ "monument": {
+  "km": 3.7,
+  "min": 4
+ },
+ "jvari": {
+  "km": 5.8,
+  "min": 5
+ },
+ "travertine": {
+  "km": 10.0,
+  "min": 9
+ },
+ "horse": {
+  "km": 18.7,
+  "min": 19
+ },
+ "truso": {
+  "km": 15.3,
+  "min": 15
+ },
+ "sioni": {
+  "km": 24.6,
+  "min": 24
+ },
+ "sno": {
+  "km": 29.9,
+  "min": 29
+ },
+ "sno-castle": {
+  "km": 30.4,
+  "min": 30
+ },
+ "gergeti": {
+  "km": 37.6,
+  "min": 40
+ },
+ "kazbek": {
+  "km": 37.6,
+  "min": 40
+ },
+ "gveleti": {
+  "km": 40.4,
+  "min": 44
+ },
+ "arsha": {
+  "km": 26.0,
+  "min": 23
+ },
+ "rock-arsha": {
+  "km": 27.6,
+  "min": 38
+ },
+ "rock-gveleti": {
+  "km": 39.5,
+  "min": 35
+ },
+ "dariali-monastery": {
+  "km": 42.5,
+  "min": 38
+ },
+ "juta": {
+  "km": 42.3,
+  "min": 47
+ },
+ "kazbegi-winter": {
+  "km": 40.4,
+  "min": 44
+ }
+}
