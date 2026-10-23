@@ -351,5 +351,17 @@
   "pos": "center 50%",
   "w": 800,
   "h": 532
+ },
+ "jvari": {
+  "title": "Own photo (Hotel Monte)",
+  "author": "",
+  "license": "",
+  "license_url": "",
+  "page": "",
+  "credit": false,
+  "own": true,
+  "pos": "center 50%",
+  "w": 408,
+  "h": 306
  }
 }
