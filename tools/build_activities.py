@@ -26,6 +26,9 @@ PATH = {"en": "/gudauri", "ka": "/ka/gudauri", "ru": "/ru/gudauri"}
 with open(os.path.join(HERE, "activities_distances.json"), encoding="utf-8") as f:
     DIST = json.load(f)
 
+PHOTO_FILE = os.path.join(HERE, "activities_photos.json")
+PHOTOS = json.load(open(PHOTO_FILE, encoding="utf-8")) if os.path.exists(PHOTO_FILE) else {}
+
 UI = {
     "title": ("Things to Do in Gudauri and Kazbegi | Hotel Monte Gudauri",
               "რა ვნახოთ და რა ვაკეთოთ გუდაურსა და ყაზბეგში | სასტუმრო მონტე გუდაური",
@@ -81,6 +84,11 @@ UI = {
     "book": ("Book a flight:", "დაჯავშნეთ ფრენა:", "Заказать полёт:"),
     "more_info": ("More information:", "დამატებითი ინფორმაცია:", "Подробнее:"),
     "book_ride": ("Book a ride:", "დაჯავშნეთ გასეირნება:", "Заказать прогулку:"),
+    "credits_h": ("Photo credits", "ფოტოების ავტორები", "Авторы фотографий"),
+    "credits_intro": ("Photos from Wikimedia Commons, resized and cropped to fit. Each is used under its free licence.",
+                      "ფოტოები Wikimedia Commons-იდან, ზომაშეცვლილი და მოჭრილი. თითოეული გამოყენებულია თავისუფალი ლიცენზიით.",
+                      "Фотографии с Wikimedia Commons, уменьшены и обрезаны. Каждая используется на условиях свободной лицензии."),
+    "by": ("by", "ავტორი:", "автор:"),
     "cost_l": ("Cost", "ფასი", "Стоимость"),
     "note_l": ("Good to know", "სასარგებლო ინფორმაცია", "Полезно знать"),
     "area_a": ("Ananuri to Pasanauri", "ანანურიდან ფასანაურამდე", "От Ананури до Пасанаури"),
@@ -165,6 +173,12 @@ def card(p, lang, order):
     parts = [
         '            <li class="act_card" id="%s" data-season="%s" data-hike="%d" data-cost="%s" data-km="%s" data-name="%s" data-order="%d">' % (
             p["id"], season_attr(p["season"]), hike, ck, d["km"], esc(name.lower()), order),
+    ]
+    ph = PHOTOS.get(p["id"])
+    if ph:
+        parts.append('                <figure class="act_photo"><img src="/images/Places/%s.jpg" alt="%s" width="%d" height="%d" loading="lazy"%s></figure>' % (
+            p["id"], esc(name), ph["w"], ph["h"], (' style="object-position:%s"' % ph["pos"]) if ph.get("pos") else ""))
+    parts += [
         "                <h2>%s</h2>" % esc(name),
         '                <p class="act_area">%s</p>' % esc(u("area_" + p["area"], lang)),
         '                <ul class="act_badges">',
@@ -244,12 +258,39 @@ def jsonld(lang, places):
         item = {"@type": "TouristAttraction", "name": p["name"][i], "description": p["desc"][i]}
         if not p.get("no_directions"):
             item["hasMap"] = view
+        if p["id"] in PHOTOS:
+            item["image"] = BASE + "/images/Places/%s.jpg" % p["id"]
         if "ll" in p and "query" not in p:
             item["geo"] = {"@type": "GeoCoordinates", "latitude": p["ll"][0], "longitude": p["ll"][1]}
         items.append({"@type": "ListItem", "position": n, "item": item})
     data = {"@context": "https://schema.org", "@type": "ItemList", "name": u("h1", lang),
             "inLanguage": lang, "itemListElement": items}
     return '<script type="application/ld+json">\n' + json.dumps(data, ensure_ascii=False, indent=1).replace("</", "<\\/") + "\n    </script>"
+
+
+def author_name(a):
+    return re.sub(r"\s*\d{4} \d{4}.*$", "", a).strip()  # drop ORCID-style numbers some authors add
+
+
+def credits(lang, places):
+    return ""  # the photo credits section was removed from the page on request
+    rows = []
+    for p in places:
+        ph = PHOTOS.get(p["id"])
+        if not ph or not ph.get("credit"):
+            continue
+        rows.append(
+            '                    <li>%s: <a href="%s" target="_blank" rel="noopener">%s</a> %s %s, <a href="%s" target="_blank" rel="noopener">%s</a></li>' % (
+                esc(p["name"][IDX[lang]]), esc(ph["page"].replace("%3A", ":")), esc("“" + ph["title"] + "”"), esc(u("by", lang)),
+                esc(author_name(ph["author"])), esc(ph["license_url"] or ph["page"]), esc(ph["license"])))
+    if not rows:
+        return ""
+    return (
+        '            <section class="act_credits" id="act_credits">\n'
+        '                <h2>%s</h2>\n'
+        '                <p>%s</p>\n'
+        '                <ul>\n%s\n                </ul>\n'
+        '            </section>\n' % (esc(u("credits_h", lang)), esc(u("credits_intro", lang)), "\n".join(rows)))
 
 
 def build_main(lang):
@@ -274,12 +315,13 @@ def build_main(lang):
         '            <ul class="act_grid" id="act_grid">\n'
         '%s\n'
         '            </ul>\n'
+        '%s'
         '            %s\n'
         '        </article>\n'
         '    </main>'
     ) % (esc(u("h1", lang)), esc(u("intro1", lang)), esc(u("intro2", lang)), esc(u("notice", lang)),
          esc(u("filters_aria", lang)), total, esc(u("count", lang)), controls(lang, total),
-         esc(count0), esc(u("empty", lang)), cards, jsonld(lang, places))
+         esc(count0), esc(u("empty", lang)), cards, credits(lang, places), jsonld(lang, places))
 
 
 def rebuild(lang):
