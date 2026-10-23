@@ -437,9 +437,9 @@ a:focus {
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    padding: 5px;
-    border:5px solid var(--BORDER-COLOR);
-    border-radius: 10px;
+    padding: 5px 1.2rem;
+    border: 2px solid var(--SECONDARY-COLOR);
+    border-radius: 999px;
     color: var(--FONT-COLOR);
     font-weight: bolder;
     text-decoration: none;
@@ -1543,5 +1543,37 @@ div.flatpickr-calendar {
 
     .room_common {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.card a.room_reserve {
+    display: block;
+    width: fit-content;
+    margin: 1.4rem auto 0.5rem;
+    padding: 0.65rem 2rem;
+    border: 2px solid var(--SECONDARY-COLOR);
+    border-radius: 999px;
+    background-color: var(--BACKGROUND-COLOR);
+    color: var(--FONT-COLOR);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.card a.room_reserve:hover,
+.card a.room_reserve:focus-visible {
+    opacity: 1;
+    background-color: var(--SECONDARY-COLOR);
+}
+
+.card a.room_reserve:focus-visible {
+    outline: 2px solid var(--PRIMARY-COLOR);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card a.room_reserve {
+        transition: none;
     }
 }
