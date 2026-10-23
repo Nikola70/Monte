@@ -1471,3 +1471,77 @@ div.flatpickr-calendar {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* ROOMS PAGE LISTS */
+
+.room_common_title {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.room_common {
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto 0;
+    max-width: 62rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.4rem 2rem;
+    text-align: left;
+}
+
+.room_common li {
+    padding-left: 1.6rem;
+    position: relative;
+}
+
+.room_common li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--SECONDARY-COLOR);
+    font-weight: bold;
+}
+
+.card p.room_tagline {
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+}
+
+.room_specs {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0.3rem;
+    text-align: left;
+}
+
+.room_specs li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.room_specs li:last-child {
+    border-bottom: none;
+}
+
+.room_specs strong {
+    color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+    .room_common {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .room_specs {
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+
+    .room_common {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
