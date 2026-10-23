@@ -70,7 +70,7 @@
 
     resetEl.addEventListener('click', () => {
         ['season', 'hike', 'cost'].forEach((f) => setChip(f, 'all'));
-        sortEl.value = 'near';
+        sortEl.value = sortEl.options[0].value; // the default sort is the first option
         render();
     });
 

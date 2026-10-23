@@ -115,9 +115,9 @@
             <div class="act_group act_sortbox">
                 <label class="act_label" for="act_sort">დალაგება</label>
                 <select id="act_sort" class="act_sort">
+                    <option value="name" selected>ანბანის მიხედვით</option>
                     <option value="near">მონტესთან უახლოესი პირველი</option>
                     <option value="hike">ჯერ ლაშქრობის გარეშე</option>
-                    <option value="name">სახელის მიხედვით</option>
                 </select>
                 <button type="button" class="act_reset" id="act_reset">ფილტრების გასუფთავება</button>
             </div>
@@ -125,20 +125,83 @@
             <p class="act_count" id="act_count" role="status" aria-live="polite">ნაჩვენებია 32 ადგილი 32-დან</p>
             <p class="act_empty" id="act_empty" hidden>ამ ფილტრებს არცერთი ადგილი არ შეესაბამება. სცადეთ გასუფთავება.</p>
             <ul class="act_grid" id="act_grid">
-            <li class="act_card" id="sadzele" data-season="summer" data-hike="3" data-cost="mixed" data-km="0.0" data-name="მთა საძელე" data-order="0">
-                <h2>მთა საძელე</h2>
-                <p class="act_area">გუდაურის რაიონი</p>
+            <li class="act_card" id="ananuri" data-season="winter summer" data-hike="0" data-cost="free" data-km="57.1" data-name="ანანურის ციხე-სიმაგრე" data-order="0">
+                <h2>ანანურის ციხე-სიმაგრე</h2>
+                <p class="act_area">ანანურიდან ფასანაურამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_free">უფასო</li>
+                </ul>
+                <p class="act_distance">57 კმ · დაახლოებით 58 წთ მანქანით სასტუმროდან</p>
+                <p>XVI–XVII საუკუნეების ციხე-სიმაგრე და ეკლესიების კომპლექსი ჟინვალის წყალსაცავის ნაპირას, ოდესღაც არაგვის ერისთავთა რეზიდენცია. აიარეთ კოშკზე და დატკბით წყალსაცავის ხედით.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> შესვლა უფასოა; მუშაობის საათები წყაროების მიხედვით განსხვავდება. ეკლესიაში მხრები და მუხლები დაიფარეთ. ზამთარში ყინულია.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.1638157,44.7029898&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ანანურის ციხე-სიმაგრე">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="arsha" data-season="winter summer" data-hike="2" data-cost="free" data-km="26.0" data-name="არშას ჩანჩქერები" data-order="1">
+                <h2>არშას ჩანჩქერები</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_hike act_hike2">🥾 საშუალო სირთულის ლაშქრობა · 15–45 წთ</li>
+                    <li class="act_badge act_cost act_free">უფასო</li>
+                </ul>
+                <p class="act_distance">26 კმ · დაახლოებით 23 წთ მანქანით საწყის წერტილამდე</p>
+                <p>ორი კასკადი მდინარე არშისწყალზე, სოფელ არშასთან, სტეფანწმინდიდან მცირე მანძილზე. პირველი ჩანჩქერი მოულოდნელად გამოჩნდება; მეორე, „ქალის თმა“, დიდ ლოდზე ჩამოედინება. ზემოთ ქედზე არშის ციხის ნანგრევებია.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> პირველი ჩანჩქერი ავტოსადგომიდან ფეხით დაახლოებით 15 წუთშია, მარტივი გასეირნებაა. მეორე ჩანჩქერამდე პირველიდან კიდევ 30 წუთია, საშუალო სირთულის ლაშქრობა. ჩაიცვით მყარი ფეხსაცმელი. საუკეთესოა ზაფხულსა და შემოდგომაზე; სხვა თვეებშიც შესაძლებელია, თუ თოვლი ცოტაა. მითითებული მანძილი არშას სოფლამდეა, საიდანაც ბილიკი იწყება.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6198,44.6025&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: არშას ჩანჩქერები">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="kazbek" data-season="summer" data-hike="3" data-cost="mixed" data-km="37.6" data-name="გერგეტის მყინვარი და ყაზბეგი" data-order="2">
+                <h2>გერგეტის მყინვარი და ყაზბეგი</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
                 <ul class="act_badges">
                     <li class="act_badge act_season">☀️ ზაფხული</li>
-                    <li class="act_badge act_hike act_hike3">🥾 რთული ლაშქრობა · 5–6 სთ</li>
+                    <li class="act_badge act_hike act_hike3">🥾 რთული ლაშქრობა · 8–9 სთ</li>
                     <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
                 </ul>
-                <p class="act_distance">იწყება სასტუმრო მონტედან.</p>
-                <p>კურორტის უმაღლესი მწვერვალი (3 307 მ), კობის უღელტეხილისა და ყაზბეგის ხედებით.</p>
-                <p class="act_info"><strong>ფასი:</strong> უფასოა; საბაგიროს გამოყენების შემთხვევაში ბილეთი ცალკეა.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ფეხით დაახლოებით 5–6 საათი სასტუმრო მონტედან. ბილიკი მონიშნული არ არის და ქარი შეიძლება ძლიერი იყოს. საუკეთესოა ივლისიდან სექტემბრამდე.</p>
+                <p class="act_distance">38 კმ · დაახლოებით 40 წთ მანქანით საწყის წერტილამდე</p>
+                <p>ძნელი მთელი დღის ლაშქრობა გერგეტის მყინვარის ძირამდე გერგეტის სოფლიდან; 5 054 მ-იანი მწვერვალი რამდენიმედღიანი გიდიანი ექსპედიციაა.</p>
+                <p class="act_info"><strong>ფასი:</strong> მყინვარამდე ლაშქრობა უფასოა; ყაზბეგზე ასასვლელად ფასიანი გიდია საჭირო (ფასი მოთხოვნით).</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> მხოლოდ ზაფხულში (გიდით ყაზბეგზე ასვლა დაახლოებით ივლისის შუა რიცხვებიდან სექტემბრის შუა რიცხვებამდეა). მითითებული მანძილი გერგეტის ბილიკის დასაწყისამდეა.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6852,44.5025&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: გერგეტის მყინვარი და ყაზბეგი">მარშრუტი მონტედან</a>
+                </p>
             </li>
-            <li class="act_card" id="freeride" data-season="winter" data-hike="2" data-cost="paid" data-km="0.9" data-name="გიდით ფრირაიდი და სათხილამურო ტურები" data-order="1">
+            <li class="act_card" id="gergeti" data-season="winter summer" data-hike="0" data-cost="free" data-km="37.6" data-name="გერგეტის სამების ეკლესია" data-order="3">
+                <h2>გერგეტის სამების ეკლესია</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_free">უფასო</li>
+                </ul>
+                <p class="act_distance">38 კმ · დაახლოებით 40 წთ მანქანით სასტუმროდან</p>
+                <p>XIV საუკუნის ეკლესია სტეფანწმინდის თავზე, 2 170 მ სიმაღლეზე, ყაზბეგის ხედით ცნობილი.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> გზა ეკლესიამდე სრულად კარგია, ამიტომ 4x4 მანქანა საჭირო არ არის და შეგიძლიათ მანქანით ახვიდეთ, ან ფეხით დაახლოებით 1–1,5 საათში. საუკეთესოა მაისიდან ოქტომბრამდე; ზამთარში თოვლია. თავმდაბლად ჩაიცვით; შიგნით გადაღება აკრძალულია. ყაზბეგის ყველაზე სუფთა ხედისთვის ადრე წადით.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6622002,44.6202573&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: გერგეტის სამების ეკლესია">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="gveleti" data-season="winter summer" data-hike="1" data-cost="free" data-km="40.4" data-name="გველეთის ჩანჩქერები" data-order="4">
+                <h2>გველეთის ჩანჩქერები</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_hike act_hike1">🥾 მარტივი გასეირნება · 30 წთ</li>
+                    <li class="act_badge act_cost act_free">უფასო</li>
+                </ul>
+                <p class="act_distance">40 კმ · დაახლოებით 44 წთ მანქანით სასტუმროდან</p>
+                <p>ორი ჩანჩქერი დარიალის ხეობაში, მოკლე და ადვილი ბილიკით; ზამთარში იყინება და ყინულზე ასვლისთვის გამოიყენება.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ადვილი გასეირნება დაახლოებით 300 მ-დან 1 კმ-მდე, მარშრუტის მიხედვით.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.7048152,44.6141445&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: გველეთის ჩანჩქერები">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="freeride" data-season="winter" data-hike="2" data-cost="paid" data-km="0.9" data-name="გიდით ფრირაიდი და სათხილამურო ტურები" data-order="5">
                 <h2>გიდით ფრირაიდი და სათხილამურო ტურები</h2>
                 <p class="act_area">გუდაურის რაიონი</p>
                 <ul class="act_badges">
@@ -150,76 +213,7 @@
                 <p class="act_info"><strong>ფასი:</strong> ფასიანია; გიდით შესავალი სათხილამურო ტური დაახლოებით 70 ევროა (სავარაუდოდ).</p>
                 <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> იანვრიდან აპრილამდე. ზვავსაშიშია: წადით მხოლოდ გიდთან ერთად და სამაშველო აღჭურვილობით.</p>
             </li>
-            <li class="act_card" id="heliski" data-season="winter" data-hike="0" data-cost="paid" data-km="0.9" data-name="ჰელი-სკი" data-order="2">
-                <h2>ჰელი-სკი</h2>
-                <p class="act_area">გუდაურის რაიონი</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️ ზამთარი</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">გუდაურის კურორტის ტერიტორიაზე; აყვანის შესახებ დაუკავშირდით ადმინისტრატორს.</p>
-                <p>ვერტმფრენით მისასვლელი ფხვიერი თოვლის დაშვებები გარშემო კავკასიონის მწვერვალებზე — ამინდის პირობებში და გამოცდილ გიდთან ერთად.</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია: დაახლოებით 550 ევროდან დღეში 3 დაშვებისთვის (სავარაუდოდ; ფასები განსხვავდება).</p>
-            </li>
-            <li class="act_card" id="lessons" data-season="winter" data-hike="0" data-cost="paid" data-km="0.9" data-name="თხილამურისა და სნოუბორდის გაკვეთილები" data-order="3">
-                <h2>თხილამურისა და სნოუბორდის გაკვეთილები</h2>
-                <p class="act_area">გუდაურის რაიონი</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️ ზამთარი</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">დაუკავშირდით ადმინისტრატორს და დაგეხმარებით გაკვეთილის ორგანიზებაში.</p>
-                <p>კერძო ინსტრუქტორები და სათხილამურო სკოლები დამწყებებისა და გაუმჯობესების მსურველებისთვის გაკვეთილებს პირდაპირ გუდაურის ფერდობებზე ატარებენ.</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია; ოფიციალური ფასების სია არ არის, დაუკავშირდით ადმინისტრატორს.</p>
-            </li>
-            <li class="act_card" id="skiing" data-season="winter" data-hike="0" data-cost="paid" data-km="0.9" data-name="თხილამურები და სნოუბორდი გუდაურში" data-order="4">
-                <h2>თხილამურები და სნოუბორდი გუდაურში</h2>
-                <p class="act_area">გუდაურის რაიონი</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️ ზამთარი</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">0,9 კმ · დაახლოებით 1 წთ მანქანით სასტუმროდან</p>
-                <p>გუდაურის საბაგიროები ყველა დონის ფერდობებს გთავაზობთ — 2 200 მ-ზე მდებარე შინოს სავარძლიანი საბაგიროდან 3 000 მ-ის ზემოთ ფრირაიდ ზონებამდე.</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია: დღიური ბილეთი დაახლოებით 70 ლარია მოზრდილზე (სავარაუდოდ; 2026/27 ტარიფი დაუდასტურებელია).</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> სეზონი დაახლოებით დეკემბრის ბოლოდან აპრილამდეა, თოვლის მიხედვით (2026/27 სეზონის თარიღები დაუდასტურებელია). შაბათ-კვირას ღამის სათხილამურო პირველი საბაგიროს ქვეშ; ასევე არის სნოუ-პარკი.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.47358,44.48286&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: თხილამურები და სნოუბორდი გუდაურში">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="snowmobile" data-season="winter" data-hike="0" data-cost="paid" data-km="0.9" data-name="სნოუმობილით ტური" data-order="5">
-                <h2>სნოუმობილით ტური</h2>
-                <p class="act_area">გუდაურის რაიონი</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️ ზამთარი</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">გუდაურის კურორტის ტერიტორიაზე; აყვანის შესახებ დაუკავშირდით ადმინისტრატორს.</p>
-                <p>გიდით ტური სნოუმობილით თოვლიან ბილიკებზე ახალი გუდაურისკენ.</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია: ფასები იწყება 150 ლარიდან ერთ ადამიანზე.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> დეკემბრიდან მარტამდე, თოვლის პირობებში.</p>
-            </li>
-            <li class="act_card" id="mtb" data-season="summer" data-hike="0" data-cost="paid" data-km="2.1" data-name="დაუნჰილი მთის ველოსიპედებით" data-order="6">
-                <h2>დაუნჰილი მთის ველოსიპედებით</h2>
-                <p class="act_area">გუდაურის რაიონი</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">☀️ ზაფხული</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">2,1 კმ · დაახლოებით 11 წთ მანქანით საწყის წერტილამდე</p>
-                <p>მონიშნული დაუნჰილ ტრასა დაახლოებით 3,5–5 კმ სიგრძისა საბაგიროს ზედა სადგურიდან, ზაფხულში ფერდობებზე დაშვებით.</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია: საბაგიროს ბილეთი და ველოსიპედის გაქირავება; ფასები დააზუსტეთ ადმინისტრატორთან.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ზაფხულში, სანამ საბაგიროები მუშაობს. აუცილებელია ჩაფხუტი და დამცავი აღჭურვილობა. მარშრუტი გიყვანთ საბაგიროს ქვედა სადგურამდე, საიდანაც ზევით ადიხართ.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.47115,44.49219&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: დაუნჰილი მთის ველოსიპედებით">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="gondola" data-season="summer" data-hike="0" data-cost="paid" data-km="2.1" data-name="გუდაური–კობის ზაფხულის საბაგირო" data-order="7">
+            <li class="act_card" id="gondola" data-season="summer" data-hike="0" data-cost="paid" data-km="2.1" data-name="გუდაური–კობის ზაფხულის საბაგირო" data-order="6">
                 <h2>გუდაური–კობის ზაფხულის საბაგირო</h2>
                 <p class="act_area">გუდაურის რაიონი</p>
                 <ul class="act_badges">
@@ -235,23 +229,142 @@
                     <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.47115,44.49219&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: გუდაური–კობის ზაფხულის საბაგირო">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="monument" data-season="winter summer" data-hike="0" data-cost="mixed" data-km="3.7" data-name="რუსეთ-საქართველოს მეგობრობის მონუმენტი" data-order="8">
-                <h2>რუსეთ-საქართველოს მეგობრობის მონუმენტი</h2>
-                <p class="act_area">გუდაურის რაიონი</p>
+            <li class="act_card" id="dariali-monastery" data-season="winter summer" data-hike="0" data-cost="free" data-km="42.5" data-name="დარიალის მონასტერი" data-order="7">
+                <h2>დარიალის მონასტერი</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
                 <ul class="act_badges">
                     <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
                     <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
+                    <li class="act_badge act_cost act_free">უფასო</li>
                 </ul>
-                <p class="act_distance">3,7 კმ · დაახლოებით 4 წთ მანქანით სასტუმროდან</p>
-                <p>1983 წლის ნახევრადწრიული მონუმენტი კერამიკული მოზაიკით, ღრმა ხეობის თავზე კლდის პირას, შთამბეჭდავი ხედებით.</p>
-                <p class="act_info"><strong>ფასი:</strong> ვიზიტი უფასოა; პარკინგი შეიძლება ფასიანი იყოს.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> სადამკვირვებლო აივნის მოაჯირი დაბალია: სიფრთხილე გამოიჩინეთ, განსაკუთრებით ბავშვებთან ერთად. სეზონის მიხედვით აქ ცხენით გასეირნებაც შეიძლება იყოს შესაძლებელი.</p>
+                <p class="act_distance">42 კმ · დაახლოებით 38 წთ მანქანით სასტუმროდან</p>
+                <p>წმინდა მთავარანგელოზთა მოქმედი თანამედროვე მონასტერი დაახლოებით 1 300 მ სიმაღლეზე, ხეობაში, რუსეთის საზღვართან ახლოს.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ღიაა ყოველდღე დაახლოებით 09:00–18:00, წირვის დროს შეზღუდული წვდომით. მკაცრი ჩაცმულობის წესი. საზღვართან ახლოსაა: წაიღეთ პასპორტი.</p>
                 <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.49227,44.4529&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: რუსეთ-საქართველოს მეგობრობის მონუმენტი">მარშრუტი მონტედან</a>
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.7355,44.6314&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: დარიალის მონასტერი">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="paragliding" data-season="winter summer" data-hike="0" data-cost="paid" data-km="4.2" data-name="პარაპლანერით ტანდემური ფრენა" data-order="9">
+            <li class="act_card" id="mtb" data-season="summer" data-hike="0" data-cost="paid" data-km="2.1" data-name="დაუნჰილი მთის ველოსიპედებით" data-order="8">
+                <h2>დაუნჰილი მთის ველოსიპედებით</h2>
+                <p class="act_area">გუდაურის რაიონი</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">☀️ ზაფხული</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
+                </ul>
+                <p class="act_distance">2,1 კმ · დაახლოებით 11 წთ მანქანით საწყის წერტილამდე</p>
+                <p>მონიშნული დაუნჰილ ტრასა დაახლოებით 3,5–5 კმ სიგრძისა საბაგიროს ზედა სადგურიდან, ზაფხულში ფერდობებზე დაშვებით.</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია: საბაგიროს ბილეთი და ველოსიპედის გაქირავება; ფასები დააზუსტეთ ადმინისტრატორთან.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ზაფხულში, სანამ საბაგიროები მუშაობს. აუცილებელია ჩაფხუტი და დამცავი აღჭურვილობა. მარშრუტი გიყვანთ საბაგიროს ქვედა სადგურამდე, საიდანაც ზევით ადიხართ.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.47115,44.49219&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: დაუნჰილი მთის ველოსიპედებით">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="truso" data-season="summer" data-hike="2" data-cost="mixed" data-km="15.3" data-name="თრუსოს ხეობა" data-order="9">
+                <h2>თრუსოს ხეობა</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">☀️ ზაფხული</li>
+                    <li class="act_badge act_hike act_hike2">🥾 საშუალო სირთულის ლაშქრობა · 1,5–7 სთ</li>
+                    <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
+                </ul>
+                <p class="act_distance">15 კმ · დაახლოებით 15 წთ მანქანით საწყის წერტილამდე</p>
+                <p>მაღალმთიანი, თითქმის ბრტყელი ხეობა თეთრი ტრავერტინის ტერასებით, მინერალური წყაროებით, ქვის კოშკებითა და მიტოვებული სოფლებით; კობიდან გრუნტის გზით მისასვლელი. გზად გადაგეყრებათ აბანოს მინერალური ტბა, სოფელი კეტრისი თავისი მონასტრით, ძველი ქვის კოშკები და ხეობის ბოლოს — დანგრეული ზაკაგორის ციხე.</p>
+                <p class="act_info"><strong>ფასი:</strong> შესვლა უფასოა; ტაქსი ან გიდით ჯიპი ფასიანია (ტაქსით ერთი მიმართულებით დაახლოებით 40 ლარი, სავარაუდოდ).</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ღიაა დაახლოებით მაისის ბოლოდან ოქტომბრამდე. ტრავერტინებამდე გზის ბოლოდან ფეხით დაახლოებით 1,5 საათია; მთელი ხეობის გავლა წასვლა-წამოსვლით 5–7 საათს მოითხოვს. წაიღეთ პასპორტი: ხეობის შესასვლელთან მესაზღვრეები ამოწმებენ. მითითებული მანძილი კობამდეა, სადაც თრუსოს გზა გამოეყოფა.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.5832,44.4274&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: თრუსოს ხეობა">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="skiing" data-season="winter" data-hike="0" data-cost="paid" data-km="0.9" data-name="თხილამურები და სნოუბორდი გუდაურში" data-order="10">
+                <h2>თხილამურები და სნოუბორდი გუდაურში</h2>
+                <p class="act_area">გუდაურის რაიონი</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️ ზამთარი</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
+                </ul>
+                <p class="act_distance">0,9 კმ · დაახლოებით 1 წთ მანქანით სასტუმროდან</p>
+                <p>გუდაურის საბაგიროები ყველა დონის ფერდობებს გთავაზობთ — 2 200 მ-ზე მდებარე შინოს სავარძლიანი საბაგიროდან 3 000 მ-ის ზემოთ ფრირაიდ ზონებამდე.</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია: დღიური ბილეთი დაახლოებით 70 ლარია მოზრდილზე (სავარაუდოდ; 2026/27 ტარიფი დაუდასტურებელია).</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> სეზონი დაახლოებით დეკემბრის ბოლოდან აპრილამდეა, თოვლის მიხედვით (2026/27 სეზონის თარიღები დაუდასტურებელია). შაბათ-კვირას ღამის სათხილამურო პირველი საბაგიროს ქვეშ; ასევე არის სნოუ-პარკი.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.47358,44.48286&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: თხილამურები და სნოუბორდი გუდაურში">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="lessons" data-season="winter" data-hike="0" data-cost="paid" data-km="0.9" data-name="თხილამურისა და სნოუბორდის გაკვეთილები" data-order="11">
+                <h2>თხილამურისა და სნოუბორდის გაკვეთილები</h2>
+                <p class="act_area">გუდაურის რაიონი</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️ ზამთარი</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
+                </ul>
+                <p class="act_distance">დაუკავშირდით ადმინისტრატორს და დაგეხმარებით გაკვეთილის ორგანიზებაში.</p>
+                <p>კერძო ინსტრუქტორები და სათხილამურო სკოლები დამწყებებისა და გაუმჯობესების მსურველებისთვის გაკვეთილებს პირდაპირ გუდაურის ფერდობებზე ატარებენ.</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია; ოფიციალური ფასების სია არ არის, დაუკავშირდით ადმინისტრატორს.</p>
+            </li>
+            <li class="act_card" id="rock-arsha" data-season="winter summer" data-hike="1" data-cost="paid" data-km="27.6" data-name="კლდეზე ცოცვა არშაში" data-order="12">
+                <h2>კლდეზე ცოცვა არშაში</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_hike act_hike1">🥾 მარტივი გასეირნება · 5 წთ</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
+                </ul>
+                <p class="act_distance">28 კმ · დაახლოებით 38 წთ მანქანით სასტუმროდან</p>
+                <p>სპორტული სკალოდრომი სოფელ არშასთან — დაახლოებით 25–50 დაბოლტილი მარშრუტი სხვადასხვა სირთულის (დაახლოებით 5a–7a), სიმაღლით დაახლოებით 30 მ-მდე, სამხრეთისკენ მიმართულ კლდეზე, დაახლოებით 1 850 მ სიმაღლეზე. მიახლოება დაახლოებით 5 წუთია აღმართზე.</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია: გიდით ცოცვა; დაუკავშირდით ადმინისტრატორს.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ცოცვისთვის საჭიროა შესაბამისი აღჭურვილობა და გამოცდილება. გიდის მოსაძებნად დაუკავშირდით ადმინისტრატორს. წინასწარ შეამოწმეთ ამინდი და კლდის მდგომარეობა.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.631573,44.610256&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: კლდეზე ცოცვა არშაში">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="rock-gveleti" data-season="summer" data-hike="0" data-cost="paid" data-km="39.5" data-name="კლდეზე ცოცვა გველეთში" data-order="13">
+                <h2>კლდეზე ცოცვა გველეთში</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">☀️ ზაფხული</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
+                </ul>
+                <p class="act_distance">40 კმ · დაახლოებით 35 წთ მანქანით სასტუმროდან</p>
+                <p>სპორტული სკალოდრომი გველეთის ჩანჩქერებთან — დაბოლტილი მარშრუტები დაახლოებით 22–28 მ სიგრძისა, სირთულით დაახლოებით 6a–6a+. კლდე დაახლოებით 13:00 საათიდან ჩრდილშია, ამიტომ ცხელი ზაფხულის დღეებისთვის კარგი არჩევანია. ავტოსადგომიდან მხოლოდ დაახლოებით 50 მ-ის სავალია.</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია: გიდით ცოცვა; დაუკავშირდით ადმინისტრატორს.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> წაიღეთ 60 მ თოკი, დაახლოებით 15 ექსპრესი და ჩაფხუტი. გიდის მოსაძებნად დაუკავშირდით ადმინისტრატორს. გველეთი ზამთარში ყინულზე ასვლითაც არის ცნობილი (იხილეთ ყინულზე ასვლის ბარათი).</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.7123027,44.6233233&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: კლდეზე ცოცვა გველეთში">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="lomisa" data-season="summer" data-hike="2" data-cost="free" data-km="13.9" data-name="ლომისის წმინდა გიორგის ეკლესია (ლაშქრობა)" data-order="14">
+                <h2>ლომისის წმინდა გიორგის ეკლესია (ლაშქრობა)</h2>
+                <p class="act_area">ანანურიდან ფასანაურამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">☀️ ზაფხული</li>
+                    <li class="act_badge act_hike act_hike2">🥾 საშუალო სირთულის ლაშქრობა · 2–3 სთ</li>
+                    <li class="act_badge act_cost act_free">უფასო</li>
+                </ul>
+                <p class="act_distance">14 კმ · დაახლოებით 15 წთ მანქანით საწყის წერტილამდე</p>
+                <p>IX–X საუკუნეების ეკლესია მლეთას თავზე, არაგვის ხეობის ფართო ხედით; ლაშქრობა დაახლოებით 8 კმ-ია და 900 მ-ით ასვლას მოიცავს.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ჩვეულებრივ მაისიდან ოქტომბრამდე. არ გადახვიოთ ბილიკიდან. მითითებული მანძილი კვემო მლეთის ბილიკის დასაწყისამდეა.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.4119,44.4995&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ლომისის წმინდა გიორგის ეკლესია (ლაშქრობა)">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="sadzele" data-season="summer" data-hike="3" data-cost="mixed" data-km="0.0" data-name="მთა საძელე" data-order="15">
+                <h2>მთა საძელე</h2>
+                <p class="act_area">გუდაურის რაიონი</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">☀️ ზაფხული</li>
+                    <li class="act_badge act_hike act_hike3">🥾 რთული ლაშქრობა · 5–6 სთ</li>
+                    <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
+                </ul>
+                <p class="act_distance">იწყება სასტუმრო მონტედან.</p>
+                <p>კურორტის უმაღლესი მწვერვალი (3 307 მ), კობის უღელტეხილისა და ყაზბეგის ხედებით.</p>
+                <p class="act_info"><strong>ფასი:</strong> უფასოა; საბაგიროს გამოყენების შემთხვევაში ბილეთი ცალკეა.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ფეხით დაახლოებით 5–6 საათი სასტუმრო მონტედან. ბილიკი მონიშნული არ არის და ქარი შეიძლება ძლიერი იყოს. საუკეთესოა ივლისიდან სექტემბრამდე.</p>
+            </li>
+            <li class="act_card" id="paragliding" data-season="winter summer" data-hike="0" data-cost="paid" data-km="4.2" data-name="პარაპლანერით ტანდემური ფრენა" data-order="16">
                 <h2>პარაპლანერით ტანდემური ფრენა</h2>
                 <p class="act_area">გუდაურის რაიონი</p>
                 <ul class="act_badges">
@@ -268,22 +381,113 @@
                     <a class="act_link" href="https://xcaucasus.ge/" target="_blank" rel="noopener noreferrer">Xcaucasus</a>
                 </p>
             </li>
-            <li class="act_card" id="jvari" data-season="winter summer" data-hike="0" data-cost="free" data-km="5.8" data-name="ჯვრის უღელტეხილი" data-order="10">
-                <h2>ჯვრის უღელტეხილი</h2>
+            <li class="act_card" id="rafting" data-season="summer" data-hike="0" data-cost="paid" data-km="32.2" data-name="რაფტინგი არაგვზე" data-order="17">
+                <h2>რაფტინგი არაგვზე</h2>
+                <p class="act_area">ანანურიდან ფასანაურამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">☀️ ზაფხული</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
+                </ul>
+                <p class="act_distance">32 კმ · დაახლოებით 30 წთ მანქანით სასტუმროდან</p>
+                <p>დამწყებთათვის ხელმისაწვდომი II–III კატეგორიის რაფტინგი ფასანაურის ქვემოთ, 6, 8 ან 12 კმ-იანი მარშრუტებით (დაახლოებით 40–90 წუთი).</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია: დაახლოებით 200–400 ლარი ერთ ადამიანზე მანძილის მიხედვით (სავარაუდოდ, დააზუსტეთ ადმინისტრატორთან).</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ფასანაურისკენ მიმავალ გზაზე, მდინარის სანაპიროზე, რამდენიმე სარაფტინგო ადგილია. სეზონი დაახლოებით მაისიდან ოქტომბრამდეა; დაადასტურეთ ოპერატორთან. მინიმალური ასაკი 5 წელი.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.363,44.684&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: რაფტინგი არაგვზე">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="monument" data-season="winter summer" data-hike="0" data-cost="mixed" data-km="3.7" data-name="რუსეთ-საქართველოს მეგობრობის მონუმენტი" data-order="18">
+                <h2>რუსეთ-საქართველოს მეგობრობის მონუმენტი</h2>
                 <p class="act_area">გუდაურის რაიონი</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
+                </ul>
+                <p class="act_distance">3,7 კმ · დაახლოებით 4 წთ მანქანით სასტუმროდან</p>
+                <p>1983 წლის ნახევრადწრიული მონუმენტი კერამიკული მოზაიკით, ღრმა ხეობის თავზე კლდის პირას, შთამბეჭდავი ხედებით.</p>
+                <p class="act_info"><strong>ფასი:</strong> ვიზიტი უფასოა; პარკინგი შეიძლება ფასიანი იყოს.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> სადამკვირვებლო აივნის მოაჯირი დაბალია: სიფრთხილე გამოიჩინეთ, განსაკუთრებით ბავშვებთან ერთად. სეზონის მიხედვით აქ ცხენით გასეირნებაც შეიძლება იყოს შესაძლებელი.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.49227,44.4529&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: რუსეთ-საქართველოს მეგობრობის მონუმენტი">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="sno" data-season="winter summer" data-hike="0" data-cost="free" data-km="29.9" data-name="სნოს ქვის თავები" data-order="19">
+                <h2>სნოს ქვის თავები</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
                 <ul class="act_badges">
                     <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
                     <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
                     <li class="act_badge act_cost act_free">უფასო</li>
                 </ul>
-                <p class="act_distance">5,8 კმ · დაახლოებით 5 წთ მანქანით სასტუმროდან</p>
-                <p>სამხედრო გზის წყალგამყოფი მწვერვალი (2 379 მ), ობელისკითა და მთების ფართო ხედებით.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ძლიერი თოვლის დროს გზა შეიძლება საათობით დაიხუროს; გასვლამდე გზების მდგომარეობა შეამოწმეთ.</p>
+                <p class="act_distance">30 კმ · დაახლოებით 29 წთ მანქანით სასტუმროდან</p>
+                <p>ქართველი კულტურის მოღვაწეების გრანიტის თავები, რომლებიც თვითნასწავლმა ადგილობრივმა მოქანდაკემ გამოძერწა და სოფელ სნოშია განთავსებული, მაგისტრალიდან მცირე გადახვევით.</p>
+                <p class="act_info"><strong>ფასი:</strong> უფასოა; მოქანდაკე პატარა შემოწირულობას (დაახლოებით 5 ლარი) მიიღებს სიამოვნებით.</p>
                 <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.50446,44.45373&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ჯვრის უღელტეხილი">მარშრუტი მონტედან</a>
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6072,44.6322&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: სნოს ქვის თავები">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="tsetskhlisjvari" data-season="summer" data-hike="2" data-cost="free" data-km="6.4" data-name="ცეცხლისჯვრის კოშკი" data-order="11">
+            <li class="act_card" id="sno-castle" data-season="winter summer" data-hike="0" data-cost="free" data-km="30.4" data-name="სნოს ციხე" data-order="20">
+                <h2>სნოს ციხე</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_free">უფასო</li>
+                </ul>
+                <p class="act_distance">30 კმ · დაახლოებით 30 წთ მანქანით სასტუმროდან</p>
+                <p>XVI–XVII საუკუნეების თავდაცვითი ციხე-სიმაგრე სოფელ სნოში, აგებული ქვითა და შავი ფიქლით სნოს ხეობის დასაცავად — ერთი კოშკითა და თითქმის წრიული, სათოფურებიანი გალავნით.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> კოშკი სტუმრებისთვის ღია არ არის; ციხის ტერიტორია სოფლის პარკში მდებარე ღია ისტორიული ობიექტია. სნოს ქვის თავები ახლოსაა.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6053547,44.6384798&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: სნოს ციხე">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="snowmobile" data-season="winter" data-hike="0" data-cost="paid" data-km="0.9" data-name="სნოუმობილით ტური" data-order="21">
+                <h2>სნოუმობილით ტური</h2>
+                <p class="act_area">გუდაურის რაიონი</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️ ზამთარი</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
+                </ul>
+                <p class="act_distance">გუდაურის კურორტის ტერიტორიაზე; აყვანის შესახებ დაუკავშირდით ადმინისტრატორს.</p>
+                <p>გიდით ტური სნოუმობილით თოვლიან ბილიკებზე ახალი გუდაურისკენ.</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია: ფასები იწყება 150 ლარიდან ერთ ადამიანზე.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> დეკემბრიდან მარტამდე, თოვლის პირობებში.</p>
+            </li>
+            <li class="act_card" id="pasanauri" data-season="winter summer" data-hike="0" data-cost="mixed" data-km="34.1" data-name="ფასანაური და ხინკალი" data-order="22">
+                <h2>ფასანაური და ხინკალი</h2>
+                <p class="act_area">ანანურიდან ფასანაურამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
+                    <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
+                </ul>
+                <p class="act_distance">34 კმ · დაახლოებით 33 წთ მანქანით სასტუმროდან</p>
+                <p>პატარა ქალაქი, რომელიც ხინკლითა და დამბალხაჭოთი არის ცნობილი. სამხედრო გზაზე კლასიკური გაჩერება სადილისთვის.</p>
+                <p class="act_info"><strong>ფასი:</strong> ვიზიტი უფასოა; საკვები ფასიანია.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.3489,44.6905&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ფასანაური და ხინკალი">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="kazbegi-winter" data-season="winter" data-hike="1" data-cost="paid" data-km="40.4" data-name="ყინულზე ასვლა გველეთის ჩანჩქერზე" data-order="23">
+                <h2>ყინულზე ასვლა გველეთის ჩანჩქერზე</h2>
+                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+                <ul class="act_badges">
+                    <li class="act_badge act_season">❄️ ზამთარი</li>
+                    <li class="act_badge act_hike act_hike1">🥾 მარტივი გასეირნება</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
+                </ul>
+                <p class="act_distance">40 კმ · დაახლოებით 44 წთ მანქანით სასტუმროდან</p>
+                <p>დამწყებთათვის ყინულზე ასვლა დარიალის ხეობაში გაყინულ გველეთის ჩანჩქერებზე, გიდთან ერთად.</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია: გიდით ყინულზე ასვლა.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> დაახლოებით დეკემბრიდან მარტამდე. გიდის მოსაძებნად დაუკავშირდით ადმინისტრატორს.</p>
+                <p class="act_links">
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.7048152,44.6141445&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ყინულზე ასვლა გველეთის ჩანჩქერზე">მარშრუტი მონტედან</a>
+                </p>
+            </li>
+            <li class="act_card" id="tsetskhlisjvari" data-season="summer" data-hike="2" data-cost="free" data-km="6.4" data-name="ცეცხლისჯვრის კოშკი" data-order="24">
                 <h2>ცეცხლისჯვრის კოშკი</h2>
                 <p class="act_area">ანანურიდან ფასანაურამდე</p>
                 <ul class="act_badges">
@@ -298,53 +502,7 @@
                     <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.4542671,44.5075741&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ცეცხლისჯვრის კოშკი">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="travertine" data-season="summer" data-hike="0" data-cost="free" data-km="10.0" data-name="ჯვრის უღელტეხილის ტრავერტინები" data-order="12">
-                <h2>ჯვრის უღელტეხილის ტრავერტინები</h2>
-                <p class="act_area">გუდაურის რაიონი</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">☀️ ზაფხული</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_free">უფასო</li>
-                </ul>
-                <p class="act_distance">10 კმ · დაახლოებით 9 წთ მანქანით სასტუმროდან</p>
-                <p>თეთრი და ნარინჯისფერი, რკინით შეფერილი ტერასები მინერალური წყაროდან გზის პირას, უღელტეხილის კობისკენა მხარეს.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> გზისპირა მოკლე გასეირნება. გთხოვთ, ტრავერტინზე ნუ ასვლით.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.5317285,44.4714479&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ჯვრის უღელტეხილის ტრავერტინები">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="lomisa" data-season="summer" data-hike="2" data-cost="free" data-km="13.9" data-name="ლომისის წმინდა გიორგის ეკლესია (ლაშქრობა)" data-order="13">
-                <h2>ლომისის წმინდა გიორგის ეკლესია (ლაშქრობა)</h2>
-                <p class="act_area">ანანურიდან ფასანაურამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">☀️ ზაფხული</li>
-                    <li class="act_badge act_hike act_hike2">🥾 საშუალო სირთულის ლაშქრობა · 2–3 სთ</li>
-                    <li class="act_badge act_cost act_free">უფასო</li>
-                </ul>
-                <p class="act_distance">14 კმ · დაახლოებით 15 წთ მანქანით საწყის წერტილამდე</p>
-                <p>IX–X საუკუნეების ეკლესია მლეთას თავზე, არაგვის ხეობის ფართო ხედით; ლაშქრობა დაახლოებით 8 კმ-ია და 900 მ-ით ასვლას მოიცავს.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ჩვეულებრივ მაისიდან ოქტომბრამდე. არ გადახვიოთ ბილიკიდან. მითითებული მანძილი კვემო მლეთის ბილიკის დასაწყისამდეა.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.4119,44.4995&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ლომისის წმინდა გიორგის ეკლესია (ლაშქრობა)">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="truso" data-season="summer" data-hike="2" data-cost="mixed" data-km="15.3" data-name="თრუსოს ხეობა" data-order="14">
-                <h2>თრუსოს ხეობა</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">☀️ ზაფხული</li>
-                    <li class="act_badge act_hike act_hike2">🥾 საშუალო სირთულის ლაშქრობა · 1,5–7 სთ</li>
-                    <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
-                </ul>
-                <p class="act_distance">15 კმ · დაახლოებით 15 წთ მანქანით საწყის წერტილამდე</p>
-                <p>მაღალმთიანი, თითქმის ბრტყელი ხეობა თეთრი ტრავერტინის ტერასებით, მინერალური წყაროებით, ქვის კოშკებითა და მიტოვებული სოფლებით; კობიდან გრუნტის გზით მისასვლელი. გზად გადაგეყრებათ აბანოს მინერალური ტბა, სოფელი კეტრისი თავისი მონასტრით, ძველი ქვის კოშკები და ხეობის ბოლოს — დანგრეული ზაკაგორის ციხე.</p>
-                <p class="act_info"><strong>ფასი:</strong> შესვლა უფასოა; ტაქსი ან გიდით ჯიპი ფასიანია (ტაქსით ერთი მიმართულებით დაახლოებით 40 ლარი, სავარაუდოდ).</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ღიაა დაახლოებით მაისის ბოლოდან ოქტომბრამდე. ტრავერტინებამდე გზის ბოლოდან ფეხით დაახლოებით 1,5 საათია; მთელი ხეობის გავლა წასვლა-წამოსვლით 5–7 საათს მოითხოვს. წაიღეთ პასპორტი: ხეობის შესასვლელთან მესაზღვრეები ამოწმებენ. მითითებული მანძილი კობამდეა, სადაც თრუსოს გზა გამოეყოფა.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.5832,44.4274&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: თრუსოს ხეობა">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="horse" data-season="summer" data-hike="0" data-cost="paid" data-km="18.7" data-name="ცხენით გასეირნება" data-order="15">
+            <li class="act_card" id="horse" data-season="summer" data-hike="0" data-cost="paid" data-km="18.7" data-name="ცხენით გასეირნება" data-order="25">
                 <h2>ცხენით გასეირნება</h2>
                 <p class="act_area">გუდაურის რაიონი</p>
                 <ul class="act_badges">
@@ -362,7 +520,7 @@
                     <a class="act_link" href="https://www.instagram.com/kazbegi_horse_riding/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </p>
             </li>
-            <li class="act_card" id="khada" data-season="summer" data-hike="2" data-cost="free" data-km="18.7" data-name="ხადას ხეობა" data-order="16">
+            <li class="act_card" id="khada" data-season="summer" data-hike="2" data-cost="free" data-km="18.7" data-name="ხადას ხეობა" data-order="26">
                 <h2>ხადას ხეობა</h2>
                 <p class="act_area">ანანურიდან ფასანაურამდე</p>
                 <ul class="act_badges">
@@ -377,7 +535,7 @@
                     <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.4256,44.5596&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ხადას ხეობა">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="sioni" data-season="winter summer" data-hike="0" data-cost="free" data-km="24.6" data-name="ხევის სიონის ბაზილიკა" data-order="17">
+            <li class="act_card" id="sioni" data-season="winter summer" data-hike="0" data-cost="free" data-km="24.6" data-name="ხევის სიონის ბაზილიკა" data-order="27">
                 <h2>ხევის სიონის ბაზილიკა</h2>
                 <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
                 <ul class="act_badges">
@@ -392,177 +550,37 @@
                     <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6031,44.5805&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ხევის სიონის ბაზილიკა">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="arsha" data-season="winter summer" data-hike="2" data-cost="free" data-km="26.0" data-name="არშას ჩანჩქერები" data-order="18">
-                <h2>არშას ჩანჩქერები</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
-                    <li class="act_badge act_hike act_hike2">🥾 საშუალო სირთულის ლაშქრობა · 15–45 წთ</li>
-                    <li class="act_badge act_cost act_free">უფასო</li>
-                </ul>
-                <p class="act_distance">26 კმ · დაახლოებით 23 წთ მანქანით საწყის წერტილამდე</p>
-                <p>ორი კასკადი მდინარე არშისწყალზე, სოფელ არშასთან, სტეფანწმინდიდან მცირე მანძილზე. პირველი ჩანჩქერი მოულოდნელად გამოჩნდება; მეორე, „ქალის თმა“, დიდ ლოდზე ჩამოედინება. ზემოთ ქედზე არშის ციხის ნანგრევებია.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> პირველი ჩანჩქერი ავტოსადგომიდან ფეხით დაახლოებით 15 წუთშია, მარტივი გასეირნებაა. მეორე ჩანჩქერამდე პირველიდან კიდევ 30 წუთია, საშუალო სირთულის ლაშქრობა. ჩაიცვით მყარი ფეხსაცმელი. საუკეთესოა ზაფხულსა და შემოდგომაზე; სხვა თვეებშიც შესაძლებელია, თუ თოვლი ცოტაა. მითითებული მანძილი არშას სოფლამდეა, საიდანაც ბილიკი იწყება.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6198,44.6025&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: არშას ჩანჩქერები">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="rock-arsha" data-season="winter summer" data-hike="1" data-cost="paid" data-km="27.6" data-name="კლდეზე ცოცვა არშაში" data-order="19">
-                <h2>კლდეზე ცოცვა არშაში</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
-                    <li class="act_badge act_hike act_hike1">🥾 მარტივი გასეირნება · 5 წთ</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">28 კმ · დაახლოებით 38 წთ მანქანით სასტუმროდან</p>
-                <p>სპორტული სკალოდრომი სოფელ არშასთან — დაახლოებით 25–50 დაბოლტილი მარშრუტი სხვადასხვა სირთულის (დაახლოებით 5a–7a), სიმაღლით დაახლოებით 30 მ-მდე, სამხრეთისკენ მიმართულ კლდეზე, დაახლოებით 1 850 მ სიმაღლეზე. მიახლოება დაახლოებით 5 წუთია აღმართზე.</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია: გიდით ცოცვა; დაუკავშირდით ადმინისტრატორს.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ცოცვისთვის საჭიროა შესაბამისი აღჭურვილობა და გამოცდილება. გიდის მოსაძებნად დაუკავშირდით ადმინისტრატორს. წინასწარ შეამოწმეთ ამინდი და კლდის მდგომარეობა.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.631573,44.610256&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: კლდეზე ცოცვა არშაში">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="sno" data-season="winter summer" data-hike="0" data-cost="free" data-km="29.9" data-name="სნოს ქვის თავები" data-order="20">
-                <h2>სნოს ქვის თავები</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+            <li class="act_card" id="jvari" data-season="winter summer" data-hike="0" data-cost="free" data-km="5.8" data-name="ჯვრის უღელტეხილი" data-order="28">
+                <h2>ჯვრის უღელტეხილი</h2>
+                <p class="act_area">გუდაურის რაიონი</p>
                 <ul class="act_badges">
                     <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
                     <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
                     <li class="act_badge act_cost act_free">უფასო</li>
                 </ul>
-                <p class="act_distance">30 კმ · დაახლოებით 29 წთ მანქანით სასტუმროდან</p>
-                <p>ქართველი კულტურის მოღვაწეების გრანიტის თავები, რომლებიც თვითნასწავლმა ადგილობრივმა მოქანდაკემ გამოძერწა და სოფელ სნოშია განთავსებული, მაგისტრალიდან მცირე გადახვევით.</p>
-                <p class="act_info"><strong>ფასი:</strong> უფასოა; მოქანდაკე პატარა შემოწირულობას (დაახლოებით 5 ლარი) მიიღებს სიამოვნებით.</p>
+                <p class="act_distance">5,8 კმ · დაახლოებით 5 წთ მანქანით სასტუმროდან</p>
+                <p>სამხედრო გზის წყალგამყოფი მწვერვალი (2 379 მ), ობელისკითა და მთების ფართო ხედებით.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ძლიერი თოვლის დროს გზა შეიძლება საათობით დაიხუროს; გასვლამდე გზების მდგომარეობა შეამოწმეთ.</p>
                 <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6072,44.6322&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: სნოს ქვის თავები">მარშრუტი მონტედან</a>
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.50446,44.45373&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ჯვრის უღელტეხილი">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="sno-castle" data-season="winter summer" data-hike="0" data-cost="free" data-km="30.4" data-name="სნოს ციხე" data-order="21">
-                <h2>სნოს ციხე</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_free">უფასო</li>
-                </ul>
-                <p class="act_distance">30 კმ · დაახლოებით 30 წთ მანქანით სასტუმროდან</p>
-                <p>XVI–XVII საუკუნეების თავდაცვითი ციხე-სიმაგრე სოფელ სნოში, აგებული ქვითა და შავი ფიქლით სნოს ხეობის დასაცავად — ერთი კოშკითა და თითქმის წრიული, სათოფურებიანი გალავნით.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> კოშკი სტუმრებისთვის ღია არ არის; ციხის ტერიტორია სოფლის პარკში მდებარე ღია ისტორიული ობიექტია. სნოს ქვის თავები ახლოსაა.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6053547,44.6384798&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: სნოს ციხე">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="rafting" data-season="summer" data-hike="0" data-cost="paid" data-km="32.2" data-name="რაფტინგი არაგვზე" data-order="22">
-                <h2>რაფტინგი არაგვზე</h2>
-                <p class="act_area">ანანურიდან ფასანაურამდე</p>
+            <li class="act_card" id="travertine" data-season="summer" data-hike="0" data-cost="free" data-km="10.0" data-name="ჯვრის უღელტეხილის ტრავერტინები" data-order="29">
+                <h2>ჯვრის უღელტეხილის ტრავერტინები</h2>
+                <p class="act_area">გუდაურის რაიონი</p>
                 <ul class="act_badges">
                     <li class="act_badge act_season">☀️ ზაფხული</li>
                     <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">32 კმ · დაახლოებით 30 წთ მანქანით სასტუმროდან</p>
-                <p>დამწყებთათვის ხელმისაწვდომი II–III კატეგორიის რაფტინგი ფასანაურის ქვემოთ, 6, 8 ან 12 კმ-იანი მარშრუტებით (დაახლოებით 40–90 წუთი).</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია: დაახლოებით 200–400 ლარი ერთ ადამიანზე მანძილის მიხედვით (სავარაუდოდ, დააზუსტეთ ადმინისტრატორთან).</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ფასანაურისკენ მიმავალ გზაზე, მდინარის სანაპიროზე, რამდენიმე სარაფტინგო ადგილია. სეზონი დაახლოებით მაისიდან ოქტომბრამდეა; დაადასტურეთ ოპერატორთან. მინიმალური ასაკი 5 წელი.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.363,44.684&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: რაფტინგი არაგვზე">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="pasanauri" data-season="winter summer" data-hike="0" data-cost="mixed" data-km="34.1" data-name="ფასანაური და ხინკალი" data-order="23">
-                <h2>ფასანაური და ხინკალი</h2>
-                <p class="act_area">ანანურიდან ფასანაურამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
-                </ul>
-                <p class="act_distance">34 კმ · დაახლოებით 33 წთ მანქანით სასტუმროდან</p>
-                <p>პატარა ქალაქი, რომელიც ხინკლითა და დამბალხაჭოთი არის ცნობილი. სამხედრო გზაზე კლასიკური გაჩერება სადილისთვის.</p>
-                <p class="act_info"><strong>ფასი:</strong> ვიზიტი უფასოა; საკვები ფასიანია.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.3489,44.6905&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ფასანაური და ხინკალი">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="kazbek" data-season="summer" data-hike="3" data-cost="mixed" data-km="37.6" data-name="გერგეტის მყინვარი და ყაზბეგი" data-order="24">
-                <h2>გერგეტის მყინვარი და ყაზბეგი</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">☀️ ზაფხული</li>
-                    <li class="act_badge act_hike act_hike3">🥾 რთული ლაშქრობა · 8–9 სთ</li>
-                    <li class="act_badge act_cost act_mixed">უფასო შესვლა, ფასიანი დამატებები</li>
-                </ul>
-                <p class="act_distance">38 კმ · დაახლოებით 40 წთ მანქანით საწყის წერტილამდე</p>
-                <p>ძნელი მთელი დღის ლაშქრობა გერგეტის მყინვარის ძირამდე გერგეტის სოფლიდან; 5 054 მ-იანი მწვერვალი რამდენიმედღიანი გიდიანი ექსპედიციაა.</p>
-                <p class="act_info"><strong>ფასი:</strong> მყინვარამდე ლაშქრობა უფასოა; ყაზბეგზე ასასვლელად ფასიანი გიდია საჭირო (ფასი მოთხოვნით).</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> მხოლოდ ზაფხულში (გიდით ყაზბეგზე ასვლა დაახლოებით ივლისის შუა რიცხვებიდან სექტემბრის შუა რიცხვებამდეა). მითითებული მანძილი გერგეტის ბილიკის დასაწყისამდეა.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6852,44.5025&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: გერგეტის მყინვარი და ყაზბეგი">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="gergeti" data-season="winter summer" data-hike="0" data-cost="free" data-km="37.6" data-name="გერგეტის სამების ეკლესია" data-order="25">
-                <h2>გერგეტის სამების ეკლესია</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
                     <li class="act_badge act_cost act_free">უფასო</li>
                 </ul>
-                <p class="act_distance">38 კმ · დაახლოებით 40 წთ მანქანით სასტუმროდან</p>
-                <p>XIV საუკუნის ეკლესია სტეფანწმინდის თავზე, 2 170 მ სიმაღლეზე, ყაზბეგის ხედით ცნობილი.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> გზა ეკლესიამდე სრულად კარგია, ამიტომ 4x4 მანქანა საჭირო არ არის და შეგიძლიათ მანქანით ახვიდეთ, ან ფეხით დაახლოებით 1–1,5 საათში. საუკეთესოა მაისიდან ოქტომბრამდე; ზამთარში თოვლია. თავმდაბლად ჩაიცვით; შიგნით გადაღება აკრძალულია. ყაზბეგის ყველაზე სუფთა ხედისთვის ადრე წადით.</p>
+                <p class="act_distance">10 კმ · დაახლოებით 9 წთ მანქანით სასტუმროდან</p>
+                <p>თეთრი და ნარინჯისფერი, რკინით შეფერილი ტერასები მინერალური წყაროდან გზის პირას, უღელტეხილის კობისკენა მხარეს.</p>
+                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> გზისპირა მოკლე გასეირნება. გთხოვთ, ტრავერტინზე ნუ ასვლით.</p>
                 <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.6622002,44.6202573&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: გერგეტის სამების ეკლესია">მარშრუტი მონტედან</a>
+                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.5317285,44.4714479&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ჯვრის უღელტეხილის ტრავერტინები">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="rock-gveleti" data-season="summer" data-hike="0" data-cost="paid" data-km="39.5" data-name="კლდეზე ცოცვა გველეთში" data-order="26">
-                <h2>კლდეზე ცოცვა გველეთში</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">☀️ ზაფხული</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">40 კმ · დაახლოებით 35 წთ მანქანით სასტუმროდან</p>
-                <p>სპორტული სკალოდრომი გველეთის ჩანჩქერებთან — დაბოლტილი მარშრუტები დაახლოებით 22–28 მ სიგრძისა, სირთულით დაახლოებით 6a–6a+. კლდე დაახლოებით 13:00 საათიდან ჩრდილშია, ამიტომ ცხელი ზაფხულის დღეებისთვის კარგი არჩევანია. ავტოსადგომიდან მხოლოდ დაახლოებით 50 მ-ის სავალია.</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია: გიდით ცოცვა; დაუკავშირდით ადმინისტრატორს.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> წაიღეთ 60 მ თოკი, დაახლოებით 15 ექსპრესი და ჩაფხუტი. გიდის მოსაძებნად დაუკავშირდით ადმინისტრატორს. გველეთი ზამთარში ყინულზე ასვლითაც არის ცნობილი (იხილეთ ყინულზე ასვლის ბარათი).</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.7123027,44.6233233&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: კლდეზე ცოცვა გველეთში">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="gveleti" data-season="winter summer" data-hike="1" data-cost="free" data-km="40.4" data-name="გველეთის ჩანჩქერები" data-order="27">
-                <h2>გველეთის ჩანჩქერები</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
-                    <li class="act_badge act_hike act_hike1">🥾 მარტივი გასეირნება · 30 წთ</li>
-                    <li class="act_badge act_cost act_free">უფასო</li>
-                </ul>
-                <p class="act_distance">40 კმ · დაახლოებით 44 წთ მანქანით სასტუმროდან</p>
-                <p>ორი ჩანჩქერი დარიალის ხეობაში, მოკლე და ადვილი ბილიკით; ზამთარში იყინება და ყინულზე ასვლისთვის გამოიყენება.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ადვილი გასეირნება დაახლოებით 300 მ-დან 1 კმ-მდე, მარშრუტის მიხედვით.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.7048152,44.6141445&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: გველეთის ჩანჩქერები">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="kazbegi-winter" data-season="winter" data-hike="1" data-cost="paid" data-km="40.4" data-name="ყინულზე ასვლა გველეთის ჩანჩქერზე" data-order="28">
-                <h2>ყინულზე ასვლა გველეთის ჩანჩქერზე</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️ ზამთარი</li>
-                    <li class="act_badge act_hike act_hike1">🥾 მარტივი გასეირნება</li>
-                    <li class="act_badge act_cost act_paid">ფასიანი</li>
-                </ul>
-                <p class="act_distance">40 კმ · დაახლოებით 44 წთ მანქანით სასტუმროდან</p>
-                <p>დამწყებთათვის ყინულზე ასვლა დარიალის ხეობაში გაყინულ გველეთის ჩანჩქერებზე, გიდთან ერთად.</p>
-                <p class="act_info"><strong>ფასი:</strong> ფასიანია: გიდით ყინულზე ასვლა.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> დაახლოებით დეკემბრიდან მარტამდე. გიდის მოსაძებნად დაუკავშირდით ადმინისტრატორს.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.7048152,44.6141445&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ყინულზე ასვლა გველეთის ჩანჩქერზე">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="juta" data-season="summer" data-hike="3" data-cost="mixed" data-km="42.3" data-name="ჯუთა და ჭაუხის მასივი" data-order="29">
+            <li class="act_card" id="juta" data-season="summer" data-hike="3" data-cost="mixed" data-km="42.3" data-name="ჯუთა და ჭაუხის მასივი" data-order="30">
                 <h2>ჯუთა და ჭაუხის მასივი</h2>
                 <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
                 <ul class="act_badges">
@@ -578,35 +596,17 @@
                     <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.55561,44.7662777&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ჯუთა და ჭაუხის მასივი">მარშრუტი მონტედან</a>
                 </p>
             </li>
-            <li class="act_card" id="dariali-monastery" data-season="winter summer" data-hike="0" data-cost="free" data-km="42.5" data-name="დარიალის მონასტერი" data-order="30">
-                <h2>დარიალის მონასტერი</h2>
-                <p class="act_area">კობიდან ყაზბეგამდე და დარიალამდე</p>
+            <li class="act_card" id="heliski" data-season="winter" data-hike="0" data-cost="paid" data-km="0.9" data-name="ჰელი-სკი" data-order="31">
+                <h2>ჰელი-სკი</h2>
+                <p class="act_area">გუდაურის რაიონი</p>
                 <ul class="act_badges">
-                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
+                    <li class="act_badge act_season">❄️ ზამთარი</li>
                     <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_free">უფასო</li>
+                    <li class="act_badge act_cost act_paid">ფასიანი</li>
                 </ul>
-                <p class="act_distance">42 კმ · დაახლოებით 38 წთ მანქანით სასტუმროდან</p>
-                <p>წმინდა მთავარანგელოზთა მოქმედი თანამედროვე მონასტერი დაახლოებით 1 300 მ სიმაღლეზე, ხეობაში, რუსეთის საზღვართან ახლოს.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> ღიაა ყოველდღე დაახლოებით 09:00–18:00, წირვის დროს შეზღუდული წვდომით. მკაცრი ჩაცმულობის წესი. საზღვართან ახლოსაა: წაიღეთ პასპორტი.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.7355,44.6314&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: დარიალის მონასტერი">მარშრუტი მონტედან</a>
-                </p>
-            </li>
-            <li class="act_card" id="ananuri" data-season="winter summer" data-hike="0" data-cost="free" data-km="57.1" data-name="ანანურის ციხე-სიმაგრე" data-order="31">
-                <h2>ანანურის ციხე-სიმაგრე</h2>
-                <p class="act_area">ანანურიდან ფასანაურამდე</p>
-                <ul class="act_badges">
-                    <li class="act_badge act_season">❄️☀️ მთელი წელი</li>
-                    <li class="act_badge act_hike act_hike0">🚗 ლაშქრობა საჭირო არ არის</li>
-                    <li class="act_badge act_cost act_free">უფასო</li>
-                </ul>
-                <p class="act_distance">57 კმ · დაახლოებით 58 წთ მანქანით სასტუმროდან</p>
-                <p>XVI–XVII საუკუნეების ციხე-სიმაგრე და ეკლესიების კომპლექსი ჟინვალის წყალსაცავის ნაპირას, ოდესღაც არაგვის ერისთავთა რეზიდენცია. აიარეთ კოშკზე და დატკბით წყალსაცავის ხედით.</p>
-                <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> შესვლა უფასოა; მუშაობის საათები წყაროების მიხედვით განსხვავდება. ეკლესიაში მხრები და მუხლები დაიფარეთ. ზამთარში ყინულია.</p>
-                <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.1638157,44.7029898&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: ანანურის ციხე-სიმაგრე">მარშრუტი მონტედან</a>
-                </p>
+                <p class="act_distance">გუდაურის კურორტის ტერიტორიაზე; აყვანის შესახებ დაუკავშირდით ადმინისტრატორს.</p>
+                <p>ვერტმფრენით მისასვლელი ფხვიერი თოვლის დაშვებები გარშემო კავკასიონის მწვერვალებზე — ამინდის პირობებში და გამოცდილ გიდთან ერთად.</p>
+                <p class="act_info"><strong>ფასი:</strong> ფასიანია: დაახლოებით 550 ევროდან დღეში 3 დაშვებისთვის (სავარაუდოდ; ფასები განსხვავდება).</p>
             </li>
             </ul>
             <script type="application/ld+json">
@@ -621,252 +621,19 @@
    "position": 1,
    "item": {
     "@type": "TouristAttraction",
-    "name": "მთა საძელე",
-    "description": "კურორტის უმაღლესი მწვერვალი (3 307 მ), კობის უღელტეხილისა და ყაზბეგის ხედებით.",
+    "name": "ანანურის ციხე-სიმაგრე",
+    "description": "XVI–XVII საუკუნეების ციხე-სიმაგრე და ეკლესიების კომპლექსი ჟინვალის წყალსაცავის ნაპირას, ოდესღაც არაგვის ერისთავთა რეზიდენცია. აიარეთ კოშკზე და დატკბით წყალსაცავის ხედით.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.1638157,44.7029898",
     "geo": {
      "@type": "GeoCoordinates",
-     "latitude": 42.51247,
-     "longitude": 44.51255
+     "latitude": 42.1638157,
+     "longitude": 44.7029898
     }
    }
   },
   {
    "@type": "ListItem",
    "position": 2,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "გიდით ფრირაიდი და სათხილამურო ტურები",
-    "description": "ტრასების გარეთ დაშვებები და სათხილამურო ტურების მარშრუტები კუდების, საძელისა და ბიდარას ქედებიდან, სერტიფიცირებულ ადგილობრივ გიდებთან ერთად.",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.49753,
-     "longitude": 44.5092
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 3,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ჰელი-სკი",
-    "description": "ვერტმფრენით მისასვლელი ფხვიერი თოვლის დაშვებები გარშემო კავკასიონის მწვერვალებზე — ამინდის პირობებში და გამოცდილ გიდთან ერთად."
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 4,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "თხილამურისა და სნოუბორდის გაკვეთილები",
-    "description": "კერძო ინსტრუქტორები და სათხილამურო სკოლები დამწყებებისა და გაუმჯობესების მსურველებისთვის გაკვეთილებს პირდაპირ გუდაურის ფერდობებზე ატარებენ.",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.47358,
-     "longitude": 44.48286
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 5,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "თხილამურები და სნოუბორდი გუდაურში",
-    "description": "გუდაურის საბაგიროები ყველა დონის ფერდობებს გთავაზობთ — 2 200 მ-ზე მდებარე შინოს სავარძლიანი საბაგიროდან 3 000 მ-ის ზემოთ ფრირაიდ ზონებამდე.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.47358,44.48286",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.47358,
-     "longitude": 44.48286
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 6,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "სნოუმობილით ტური",
-    "description": "გიდით ტური სნოუმობილით თოვლიან ბილიკებზე ახალი გუდაურისკენ."
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 7,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "დაუნჰილი მთის ველოსიპედებით",
-    "description": "მონიშნული დაუნჰილ ტრასა დაახლოებით 3,5–5 კმ სიგრძისა საბაგიროს ზედა სადგურიდან, ზაფხულში ფერდობებზე დაშვებით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.49392,44.49195",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.49392,
-     "longitude": 44.49195
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 8,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "გუდაური–კობის ზაფხულის საბაგირო",
-    "description": "ოთხი ერთმანეთთან დაკავშირებული საბაგირო გადასასვლელს კობისკენ კვეთს და კავკასიონის ფართო ხედებს გვთავაზობს, ლაშქრობა საჭირო არ არის.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.47115,44.49219",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.47115,
-     "longitude": 44.49219
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 9,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "რუსეთ-საქართველოს მეგობრობის მონუმენტი",
-    "description": "1983 წლის ნახევრადწრიული მონუმენტი კერამიკული მოზაიკით, ღრმა ხეობის თავზე კლდის პირას, შთამბეჭდავი ხედებით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.49227,44.4529",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.49227,
-     "longitude": 44.4529
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 10,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "პარაპლანერით ტანდემური ფრენა",
-    "description": "10–20 წუთიანი ტანდემური ფრენა კუდების ან ბიდარას აფრენის წერტილიდან გუდაურის ხეობაზე, დაშვებით პირველი საბაგიროს სადგურთან.",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.49704,
-     "longitude": 44.50748
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 11,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ჯვრის უღელტეხილი",
-    "description": "სამხედრო გზის წყალგამყოფი მწვერვალი (2 379 მ), ობელისკითა და მთების ფართო ხედებით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.50446,44.45373",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.50446,
-     "longitude": 44.45373
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 12,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ცეცხლისჯვრის კოშკი",
-    "description": "დანგრეული ქვის საგუშაგო კოშკი გუდაურთან ახლოს, გზიდან ფეხით დაახლოებით 45 წუთში მისასვლელი.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.4542671,44.5075741",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.4542671,
-     "longitude": 44.5075741
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 13,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ჯვრის უღელტეხილის ტრავერტინები",
-    "description": "თეთრი და ნარინჯისფერი, რკინით შეფერილი ტერასები მინერალური წყაროდან გზის პირას, უღელტეხილის კობისკენა მხარეს.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.5317285,44.4714479",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.5317285,
-     "longitude": 44.4714479
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 14,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ლომისის წმინდა გიორგის ეკლესია (ლაშქრობა)",
-    "description": "IX–X საუკუნეების ეკლესია მლეთას თავზე, არაგვის ხეობის ფართო ხედით; ლაშქრობა დაახლოებით 8 კმ-ია და 900 მ-ით ასვლას მოიცავს.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.4119,44.4995",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.4119,
-     "longitude": 44.4995
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 15,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "თრუსოს ხეობა",
-    "description": "მაღალმთიანი, თითქმის ბრტყელი ხეობა თეთრი ტრავერტინის ტერასებით, მინერალური წყაროებით, ქვის კოშკებითა და მიტოვებული სოფლებით; კობიდან გრუნტის გზით მისასვლელი. გზად გადაგეყრებათ აბანოს მინერალური ტბა, სოფელი კეტრისი თავისი მონასტრით, ძველი ქვის კოშკები და ხეობის ბოლოს — დანგრეული ზაკაგორის ციხე.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.5832,44.4274",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.5832,
-     "longitude": 44.4274
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 16,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ცხენით გასეირნება",
-    "description": "გიდით ცხენით გასეირნება ხადას ხეობაში და სტეფანწმინდიდან გერგეტისკენ."
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 17,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ხადას ხეობა",
-    "description": "ხადას ხეობა — ქვეშეთის თავზე მდებარე ლამაზი გვერდითი ხეობა, ცნობილი როგორც „კოშკების ხეობა“. აქ შეგიძლიათ ნახოთ ძველი თავდაცვითი ქვის კოშკები, X–XI საუკუნეების კოროღოს ეკლესია, რკინით მდიდარი მინერალური წყარო და პატარა ჩანჩქერი; ხეობის ხედებით. ქვეშეთიდან ფეხით ან გრუნტის გზით მისასვლელი.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.4256,44.5596",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.4256,
-     "longitude": 44.5596
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 18,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ხევის სიონის ბაზილიკა",
-    "description": "IX–X საუკუნეების უგუმბათო ბაზილიკა კოშკითა და გალავნით, შიგნით მკრთალი კედლის მხატვრობით და გვერდით კლდეზე საგუშაგო კოშკით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.6031,44.5805",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.6031,
-     "longitude": 44.5805
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 19,
    "item": {
     "@type": "TouristAttraction",
     "name": "არშას ჩანჩქერები",
@@ -881,82 +648,7 @@
   },
   {
    "@type": "ListItem",
-   "position": 20,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "კლდეზე ცოცვა არშაში",
-    "description": "სპორტული სკალოდრომი სოფელ არშასთან — დაახლოებით 25–50 დაბოლტილი მარშრუტი სხვადასხვა სირთულის (დაახლოებით 5a–7a), სიმაღლით დაახლოებით 30 მ-მდე, სამხრეთისკენ მიმართულ კლდეზე, დაახლოებით 1 850 მ სიმაღლეზე. მიახლოება დაახლოებით 5 წუთია აღმართზე.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.631573,44.610256",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.631573,
-     "longitude": 44.610256
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 21,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "სნოს ქვის თავები",
-    "description": "ქართველი კულტურის მოღვაწეების გრანიტის თავები, რომლებიც თვითნასწავლმა ადგილობრივმა მოქანდაკემ გამოძერწა და სოფელ სნოშია განთავსებული, მაგისტრალიდან მცირე გადახვევით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.6072,44.6322",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.6072,
-     "longitude": 44.6322
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 22,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "სნოს ციხე",
-    "description": "XVI–XVII საუკუნეების თავდაცვითი ციხე-სიმაგრე სოფელ სნოში, აგებული ქვითა და შავი ფიქლით სნოს ხეობის დასაცავად — ერთი კოშკითა და თითქმის წრიული, სათოფურებიანი გალავნით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.6053547,44.6384798",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.6053547,
-     "longitude": 44.6384798
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 23,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "რაფტინგი არაგვზე",
-    "description": "დამწყებთათვის ხელმისაწვდომი II–III კატეგორიის რაფტინგი ფასანაურის ქვემოთ, 6, 8 ან 12 კმ-იანი მარშრუტებით (დაახლოებით 40–90 წუთი).",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.363,44.684",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.363,
-     "longitude": 44.684
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 24,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "ფასანაური და ხინკალი",
-    "description": "პატარა ქალაქი, რომელიც ხინკლითა და დამბალხაჭოთი არის ცნობილი. სამხედრო გზაზე კლასიკური გაჩერება სადილისთვის.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.3489,44.6905",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.3489,
-     "longitude": 44.6905
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 25,
+   "position": 3,
    "item": {
     "@type": "TouristAttraction",
     "name": "გერგეტის მყინვარი და ყაზბეგი",
@@ -971,7 +663,7 @@
   },
   {
    "@type": "ListItem",
-   "position": 26,
+   "position": 4,
    "item": {
     "@type": "TouristAttraction",
     "name": "გერგეტის სამების ეკლესია",
@@ -986,22 +678,7 @@
   },
   {
    "@type": "ListItem",
-   "position": 27,
-   "item": {
-    "@type": "TouristAttraction",
-    "name": "კლდეზე ცოცვა გველეთში",
-    "description": "სპორტული სკალოდრომი გველეთის ჩანჩქერებთან — დაბოლტილი მარშრუტები დაახლოებით 22–28 მ სიგრძისა, სირთულით დაახლოებით 6a–6a+. კლდე დაახლოებით 13:00 საათიდან ჩრდილშია, ამიტომ ცხელი ზაფხულის დღეებისთვის კარგი არჩევანია. ავტოსადგომიდან მხოლოდ დაახლოებით 50 მ-ის სავალია.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.7123027,44.6233233",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.7123027,
-     "longitude": 44.6233233
-    }
-   }
-  },
-  {
-   "@type": "ListItem",
-   "position": 28,
+   "position": 5,
    "item": {
     "@type": "TouristAttraction",
     "name": "გველეთის ჩანჩქერები",
@@ -1016,37 +693,36 @@
   },
   {
    "@type": "ListItem",
-   "position": 29,
+   "position": 6,
    "item": {
     "@type": "TouristAttraction",
-    "name": "ყინულზე ასვლა გველეთის ჩანჩქერზე",
-    "description": "დამწყებთათვის ყინულზე ასვლა დარიალის ხეობაში გაყინულ გველეთის ჩანჩქერებზე, გიდთან ერთად.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.7048152,44.6141445",
+    "name": "გიდით ფრირაიდი და სათხილამურო ტურები",
+    "description": "ტრასების გარეთ დაშვებები და სათხილამურო ტურების მარშრუტები კუდების, საძელისა და ბიდარას ქედებიდან, სერტიფიცირებულ ადგილობრივ გიდებთან ერთად.",
     "geo": {
      "@type": "GeoCoordinates",
-     "latitude": 42.7048152,
-     "longitude": 44.6141445
+     "latitude": 42.49753,
+     "longitude": 44.5092
     }
    }
   },
   {
    "@type": "ListItem",
-   "position": 30,
+   "position": 7,
    "item": {
     "@type": "TouristAttraction",
-    "name": "ჯუთა და ჭაუხის მასივი",
-    "description": "მაღალმთიანი სოფელი დაახლოებით 2 200 მ სიმაღლეზე, ჭაუხის კბილანა მწვერვალების ძირას, ჭაუხის ველისკენ, ჩანჩქერისა და ტბებისკენ საფეხმავლო მარშრუტებით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.55561,44.7662777",
+    "name": "გუდაური–კობის ზაფხულის საბაგირო",
+    "description": "ოთხი ერთმანეთთან დაკავშირებული საბაგირო გადასასვლელს კობისკენ კვეთს და კავკასიონის ფართო ხედებს გვთავაზობს, ლაშქრობა საჭირო არ არის.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.47115,44.49219",
     "geo": {
      "@type": "GeoCoordinates",
-     "latitude": 42.55561,
-     "longitude": 44.7662777
+     "latitude": 42.47115,
+     "longitude": 44.49219
     }
    }
   },
   {
    "@type": "ListItem",
-   "position": 31,
+   "position": 8,
    "item": {
     "@type": "TouristAttraction",
     "name": "დარიალის მონასტერი",
@@ -1061,17 +737,341 @@
   },
   {
    "@type": "ListItem",
+   "position": 9,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "დაუნჰილი მთის ველოსიპედებით",
+    "description": "მონიშნული დაუნჰილ ტრასა დაახლოებით 3,5–5 კმ სიგრძისა საბაგიროს ზედა სადგურიდან, ზაფხულში ფერდობებზე დაშვებით.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.49392,44.49195",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.49392,
+     "longitude": 44.49195
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 10,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "თრუსოს ხეობა",
+    "description": "მაღალმთიანი, თითქმის ბრტყელი ხეობა თეთრი ტრავერტინის ტერასებით, მინერალური წყაროებით, ქვის კოშკებითა და მიტოვებული სოფლებით; კობიდან გრუნტის გზით მისასვლელი. გზად გადაგეყრებათ აბანოს მინერალური ტბა, სოფელი კეტრისი თავისი მონასტრით, ძველი ქვის კოშკები და ხეობის ბოლოს — დანგრეული ზაკაგორის ციხე.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.5832,44.4274",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.5832,
+     "longitude": 44.4274
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 11,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "თხილამურები და სნოუბორდი გუდაურში",
+    "description": "გუდაურის საბაგიროები ყველა დონის ფერდობებს გთავაზობთ — 2 200 მ-ზე მდებარე შინოს სავარძლიანი საბაგიროდან 3 000 მ-ის ზემოთ ფრირაიდ ზონებამდე.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.47358,44.48286",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.47358,
+     "longitude": 44.48286
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 12,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "თხილამურისა და სნოუბორდის გაკვეთილები",
+    "description": "კერძო ინსტრუქტორები და სათხილამურო სკოლები დამწყებებისა და გაუმჯობესების მსურველებისთვის გაკვეთილებს პირდაპირ გუდაურის ფერდობებზე ატარებენ.",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.47358,
+     "longitude": 44.48286
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 13,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "კლდეზე ცოცვა არშაში",
+    "description": "სპორტული სკალოდრომი სოფელ არშასთან — დაახლოებით 25–50 დაბოლტილი მარშრუტი სხვადასხვა სირთულის (დაახლოებით 5a–7a), სიმაღლით დაახლოებით 30 მ-მდე, სამხრეთისკენ მიმართულ კლდეზე, დაახლოებით 1 850 მ სიმაღლეზე. მიახლოება დაახლოებით 5 წუთია აღმართზე.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.631573,44.610256",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.631573,
+     "longitude": 44.610256
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 14,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "კლდეზე ცოცვა გველეთში",
+    "description": "სპორტული სკალოდრომი გველეთის ჩანჩქერებთან — დაბოლტილი მარშრუტები დაახლოებით 22–28 მ სიგრძისა, სირთულით დაახლოებით 6a–6a+. კლდე დაახლოებით 13:00 საათიდან ჩრდილშია, ამიტომ ცხელი ზაფხულის დღეებისთვის კარგი არჩევანია. ავტოსადგომიდან მხოლოდ დაახლოებით 50 მ-ის სავალია.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.7123027,44.6233233",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.7123027,
+     "longitude": 44.6233233
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 15,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ლომისის წმინდა გიორგის ეკლესია (ლაშქრობა)",
+    "description": "IX–X საუკუნეების ეკლესია მლეთას თავზე, არაგვის ხეობის ფართო ხედით; ლაშქრობა დაახლოებით 8 კმ-ია და 900 მ-ით ასვლას მოიცავს.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.4119,44.4995",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.4119,
+     "longitude": 44.4995
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 16,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "მთა საძელე",
+    "description": "კურორტის უმაღლესი მწვერვალი (3 307 მ), კობის უღელტეხილისა და ყაზბეგის ხედებით.",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.51247,
+     "longitude": 44.51255
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 17,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "პარაპლანერით ტანდემური ფრენა",
+    "description": "10–20 წუთიანი ტანდემური ფრენა კუდების ან ბიდარას აფრენის წერტილიდან გუდაურის ხეობაზე, დაშვებით პირველი საბაგიროს სადგურთან.",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.49704,
+     "longitude": 44.50748
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 18,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "რაფტინგი არაგვზე",
+    "description": "დამწყებთათვის ხელმისაწვდომი II–III კატეგორიის რაფტინგი ფასანაურის ქვემოთ, 6, 8 ან 12 კმ-იანი მარშრუტებით (დაახლოებით 40–90 წუთი).",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.363,44.684",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.363,
+     "longitude": 44.684
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 19,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "რუსეთ-საქართველოს მეგობრობის მონუმენტი",
+    "description": "1983 წლის ნახევრადწრიული მონუმენტი კერამიკული მოზაიკით, ღრმა ხეობის თავზე კლდის პირას, შთამბეჭდავი ხედებით.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.49227,44.4529",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.49227,
+     "longitude": 44.4529
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 20,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "სნოს ქვის თავები",
+    "description": "ქართველი კულტურის მოღვაწეების გრანიტის თავები, რომლებიც თვითნასწავლმა ადგილობრივმა მოქანდაკემ გამოძერწა და სოფელ სნოშია განთავსებული, მაგისტრალიდან მცირე გადახვევით.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.6072,44.6322",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.6072,
+     "longitude": 44.6322
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 21,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "სნოს ციხე",
+    "description": "XVI–XVII საუკუნეების თავდაცვითი ციხე-სიმაგრე სოფელ სნოში, აგებული ქვითა და შავი ფიქლით სნოს ხეობის დასაცავად — ერთი კოშკითა და თითქმის წრიული, სათოფურებიანი გალავნით.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.6053547,44.6384798",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.6053547,
+     "longitude": 44.6384798
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 22,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "სნოუმობილით ტური",
+    "description": "გიდით ტური სნოუმობილით თოვლიან ბილიკებზე ახალი გუდაურისკენ."
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 23,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ფასანაური და ხინკალი",
+    "description": "პატარა ქალაქი, რომელიც ხინკლითა და დამბალხაჭოთი არის ცნობილი. სამხედრო გზაზე კლასიკური გაჩერება სადილისთვის.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.3489,44.6905",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.3489,
+     "longitude": 44.6905
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 24,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ყინულზე ასვლა გველეთის ჩანჩქერზე",
+    "description": "დამწყებთათვის ყინულზე ასვლა დარიალის ხეობაში გაყინულ გველეთის ჩანჩქერებზე, გიდთან ერთად.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.7048152,44.6141445",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.7048152,
+     "longitude": 44.6141445
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 25,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ცეცხლისჯვრის კოშკი",
+    "description": "დანგრეული ქვის საგუშაგო კოშკი გუდაურთან ახლოს, გზიდან ფეხით დაახლოებით 45 წუთში მისასვლელი.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.4542671,44.5075741",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.4542671,
+     "longitude": 44.5075741
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 26,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ცხენით გასეირნება",
+    "description": "გიდით ცხენით გასეირნება ხადას ხეობაში და სტეფანწმინდიდან გერგეტისკენ."
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 27,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ხადას ხეობა",
+    "description": "ხადას ხეობა — ქვეშეთის თავზე მდებარე ლამაზი გვერდითი ხეობა, ცნობილი როგორც „კოშკების ხეობა“. აქ შეგიძლიათ ნახოთ ძველი თავდაცვითი ქვის კოშკები, X–XI საუკუნეების კოროღოს ეკლესია, რკინით მდიდარი მინერალური წყარო და პატარა ჩანჩქერი; ხეობის ხედებით. ქვეშეთიდან ფეხით ან გრუნტის გზით მისასვლელი.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.4256,44.5596",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.4256,
+     "longitude": 44.5596
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 28,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ხევის სიონის ბაზილიკა",
+    "description": "IX–X საუკუნეების უგუმბათო ბაზილიკა კოშკითა და გალავნით, შიგნით მკრთალი კედლის მხატვრობით და გვერდით კლდეზე საგუშაგო კოშკით.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.6031,44.5805",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.6031,
+     "longitude": 44.5805
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 29,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ჯვრის უღელტეხილი",
+    "description": "სამხედრო გზის წყალგამყოფი მწვერვალი (2 379 მ), ობელისკითა და მთების ფართო ხედებით.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.50446,44.45373",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.50446,
+     "longitude": 44.45373
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 30,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ჯვრის უღელტეხილის ტრავერტინები",
+    "description": "თეთრი და ნარინჯისფერი, რკინით შეფერილი ტერასები მინერალური წყაროდან გზის პირას, უღელტეხილის კობისკენა მხარეს.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.5317285,44.4714479",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.5317285,
+     "longitude": 44.4714479
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 31,
+   "item": {
+    "@type": "TouristAttraction",
+    "name": "ჯუთა და ჭაუხის მასივი",
+    "description": "მაღალმთიანი სოფელი დაახლოებით 2 200 მ სიმაღლეზე, ჭაუხის კბილანა მწვერვალების ძირას, ჭაუხის ველისკენ, ჩანჩქერისა და ტბებისკენ საფეხმავლო მარშრუტებით.",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.55561,44.7662777",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 42.55561,
+     "longitude": 44.7662777
+    }
+   }
+  },
+  {
+   "@type": "ListItem",
    "position": 32,
    "item": {
     "@type": "TouristAttraction",
-    "name": "ანანურის ციხე-სიმაგრე",
-    "description": "XVI–XVII საუკუნეების ციხე-სიმაგრე და ეკლესიების კომპლექსი ჟინვალის წყალსაცავის ნაპირას, ოდესღაც არაგვის ერისთავთა რეზიდენცია. აიარეთ კოშკზე და დატკბით წყალსაცავის ხედით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.1638157,44.7029898",
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 42.1638157,
-     "longitude": 44.7029898
-    }
+    "name": "ჰელი-სკი",
+    "description": "ვერტმფრენით მისასვლელი ფხვიერი თოვლის დაშვებები გარშემო კავკასიონის მწვერვალებზე — ამინდის პირობებში და გამოცდილ გიდთან ერთად."
    }
   }
  ]

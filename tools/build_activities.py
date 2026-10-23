@@ -64,7 +64,7 @@ UI = {
     "sort": ("Sort by", "დალაგება", "Сортировка"),
     "s_near": ("Closest to Monte", "მონტესთან უახლოესი პირველი", "Сначала ближайшие к Monte"),
     "s_hike": ("Least hiking first", "ჯერ ლაშქრობის გარეშე", "Сначала без похода"),
-    "s_name": ("Name A–Z", "სახელის მიხედვით", "По названию"),
+    "s_name": ("Alphabetical (A–Z)", "ანბანის მიხედვით", "По алфавиту"),
     "reset": ("Reset filters", "ფილტრების გასუფთავება", "Сбросить фильтры"),
     "count": ("Showing {n} of {t} places", "ნაჩვენებია {n} ადგილი {t}-დან", "Показано {n} из {t} мест"),
     "empty": ("No places match these filters. Try resetting them.",
@@ -227,9 +227,9 @@ def controls(lang, total):
     rows.append('            <div class="act_group act_sortbox">')
     rows.append('                <label class="act_label" for="act_sort">%s</label>' % esc(u("sort", lang)))
     rows.append('                <select id="act_sort" class="act_sort">')
+    rows.append('                    <option value="name" selected>%s</option>' % esc(u("s_name", lang)))
     rows.append('                    <option value="near">%s</option>' % esc(u("s_near", lang)))
     rows.append('                    <option value="hike">%s</option>' % esc(u("s_hike", lang)))
-    rows.append('                    <option value="name">%s</option>' % esc(u("s_name", lang)))
     rows.append("                </select>")
     rows.append('                <button type="button" class="act_reset" id="act_reset">%s</button>' % esc(u("reset", lang)))
     rows.append("            </div>")
@@ -253,7 +253,7 @@ def jsonld(lang, places):
 
 
 def build_main(lang):
-    places = sorted(PLACES, key=lambda p: (DIST[p["id"]]["km"], p["name"][0]))
+    places = sorted(PLACES, key=lambda p: (p["name"][IDX[lang]].casefold(), DIST[p["id"]]["km"]))
     total = len(places)
     cards = "\n".join(card(p, lang, n) for n, p in enumerate(places))
     count0 = u("count", lang).format(n=total, t=total)
