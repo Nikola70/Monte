@@ -221,7 +221,7 @@ PLACES = [
     ),
     dict(
         id="monument", area="g", ll=(42.49227, 44.4529), season="Y", hike=0, cost="M",
-        name=("Russia–Georgia Friendship Monument", "რუსეთ-საქართველოს მეგობრობის მონუმენტი", "Монумент дружбы России и Грузии"),
+        name=("Friendship Monument", "მეგობრობის მონუმენტი", "Монумент дружбы"),
         desc=("A 1983 semicircular monument with a ceramic mosaic, standing on a cliff edge above a deep gorge with dramatic views.",
               "1983 წლის ნახევრადწრიული მონუმენტი კერამიკული მოზაიკით, ღრმა ხეობის თავზე კლდის პირას, შთამბეჭდავი ხედებით.",
               "Полукруглый монумент 1983 года с керамической мозаикой на краю обрыва над глубоким ущельем, с эффектными видами."),
