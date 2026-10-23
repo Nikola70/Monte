@@ -1577,3 +1577,14 @@ div.flatpickr-calendar {
         transition: none;
     }
 }
+
+/* WHATSAPP ICON NEXT TO THE PHONE NUMBER */
+
+a.whatsapp_link {
+    color: #25D366;
+    font-size: 1em;
+}
+
+footer .secondary_nav a.whatsapp_link {
+    color: #25D366;
+}
