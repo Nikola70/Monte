@@ -190,7 +190,7 @@
     
         emailjs.sendForm('service_2dx6jcp', 'template_96wouwi', event.target)
         .then(() => {
-            alert('Сообщение успешно отправлено!');
+            alert('Благодарим за ваш запрос! Мы получили его и свяжемся с вами в ближайшее время.');
             event.target.reset();
         })
           .catch((error) => alert('Не удалось отправить сообщение: ' + error.text));
