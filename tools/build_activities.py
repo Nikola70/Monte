@@ -36,7 +36,7 @@ UI = {
     "meta": ("Sights and activities from Ananuri to the Russian border: skiing, paragliding, hiking, rafting, churches and fortresses, with Google Maps links, distances, seasons and costs.",
              "ღირსშესანიშნაობები და აქტივობები ანანურიდან რუსეთის საზღვრამდე: თხილამურები, პარაპლანერიზმი, ლაშქრობა, რაფტინგი, ეკლესიები და ციხეები — Google Maps ბმულებით, მანძილებით, სეზონებითა და ფასებით.",
              "Достопримечательности и занятия от Ананури до российской границы: лыжи, парапланы, походы, рафтинг, церкви и крепости, со ссылками на Google Maps, расстояниями, сезонами и стоимостью."),
-    "h1": ("Activities & Sights", "აქტივობები და ღირსშესანიშნაობები", "Чем заняться и что посмотреть"),
+    "h1": ("Things to Do", "აქტივობები და ღირსშესანიშნაობები", "Чем заняться и что посмотреть"),
     "intro1": ("From Ananuri Fortress on the Aragvi River to the Russian border at Upper Lars, the Georgian Military Road is lined with castles, monasteries, waterfalls and mountain trails, and Gudauri sits right in the middle of it. Here is what you can do and see from Hotel Monte.",
                "არაგვზე მდებარე ანანურის ციხე-სიმაგრიდან ზემო ლარსთან რუსეთის საზღვრამდე საქართველოს სამხედრო გზას გასდევს ციხე-სიმაგრეები, მონასტრები, ჩანჩქერები და სამთო ბილიკები, გუდაური კი სწორედ შუაგულშია. აი, რისი გაკეთება და ნახვა შეგიძლიათ სასტუმრო მონტედან.",
                "От крепости Ананури на реке Арагви до российской границы у Верхнего Ларса вдоль Военно-Грузинской дороги тянутся замки, монастыри, водопады и горные тропы, а Гудаури находится в самой середине маршрута. Вот что можно посмотреть и чем заняться, остановившись в отеле Monte."),
