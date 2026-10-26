@@ -39,13 +39,105 @@
     {
       "@context": "https://schema.org",
       "@type": "Hotel",
+      "@id": "https://montegudauri.com/#hotel",
       "name": "Hotel Monte",
       "url": "https://montegudauri.com/",
-      "image": "https://montegudauri.com/images/Exterior/hotel_1.jpg",
-      "telephone": "+995 574 161 010",
+      "description": "Hotel Monte in Upper Gudauri: rooms with private balconies and mountain views, Georgian and European restaurant, sauna, indoor pool and a free winter shuttle to the ski lift.",
+      "image": [
+        "https://montegudauri.com/images/Exterior/hotel_1.jpg",
+        "https://montegudauri.com/images/About/hotel_exterior.jpg"
+      ],
+      "telephone": "+995 574 080 202",
       "email": "info@montegudauri.com",
-      "address": {"@type": "PostalAddress", "addressLocality": "Gudauri", "addressCountry": "GE"},
-      "sameAs": ["https://www.facebook.com/Montegudauri", "https://www.instagram.com/monte.gudauri/"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Upper Gudauri, Near Post",
+        "addressLocality": "Gudauri",
+        "addressRegion": "Mtskheta-Mtianeti",
+        "postalCode": "4702",
+        "addressCountry": "GE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.4767341,
+        "longitude": 44.4759827
+      },
+      "hasMap": "https://maps.app.goo.gl/Zi5YPahn9ju6hiJY8",
+      "checkinTime": "15:00",
+      "checkoutTime": "12:00",
+      "petsAllowed": false,
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free Wi-Fi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free parking",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Indoor swimming pool",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Sauna",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Steam room",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Game room",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Restaurant",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Bar",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Ski and snowboard rental",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free winter shuttle to the Shino ski lift",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Mountain bike rental",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Conference room",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Balcony with mountain view in every room",
+          "value": true
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/Montegudauri",
+        "https://www.instagram.com/monte.gudauri/",
+        "https://www.booking.com/hotel/ge/monte.html"
+      ],
       "inLanguage": "en"
     }
     </script>
@@ -53,7 +145,7 @@
 <body>
 <header>
     <section class="header_line">
-        <a class="logo_link" href="./"><img src="images/logo_monte_697_331.png" alt="Hotel Monte Logo"></a>
+        <a class="logo_link" href="./"><img src="images/logo_monte_697_331.png" alt="Hotel Monte Logo" width="697" height="331"></a>
         <a class="make_reservation" href="./contact">Make A Reservation</a>
     </section>
     <details class="language-selector">
@@ -96,9 +188,8 @@
         </nav>
 </header>
     <main>
-        <video autoplay muted loop>
-            <source src="videos/drone_monte.mp4" type="video/mp4">
-        </video>
+        <h1 class="sr-only">Hotel Monte: Mountain Hotel in Upper Gudauri, Georgia</h1>
+        <video id="hero_video" muted loop playsinline preload="none" width="1920" height="814" poster="videos/drone_poster.jpg" data-src-desktop="videos/drone_monte.mp4" data-src-mobile="videos/drone_monte_mobile.mp4" aria-hidden="true"></video>
         <article class="main_page">
             <section class="card" id="about_monte">
                 <div class="card_text">
@@ -108,7 +199,7 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img src="images/Exterior/hotel_1.jpg" alt="Hotel Monte terrace">
+                    <img src="images/Exterior/hotel_1.jpg" alt="Hotel Monte terrace" width="1024" height="575" loading="lazy" decoding="async">
                 </figure>
             </section>
             <section class="card" id="rooms">
@@ -119,7 +210,7 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img class="card_image" src="images/Rooms/Deluxe/deluxe_1_1024_683.jpg" alt="Deluxe double room">
+                    <img class="card_image" src="images/Rooms/Deluxe/deluxe_1_1024_683.jpg" alt="Deluxe double room" width="1024" height="683" loading="lazy" decoding="async">
                 </figure>
             </section>
             <section class="card" id="restaurant">
@@ -130,7 +221,7 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img class="card_image" src="images/Dining/Restaurant/restaurant_1.jpeg" alt="Hotel Monte restaurant">
+                    <img class="card_image" src="images/Dining/Restaurant/restaurant_1.jpeg" alt="Hotel Monte restaurant" width="1280" height="853" loading="lazy" decoding="async">
                 </figure>
             </section>
             <section class="card" id="services">
@@ -145,7 +236,7 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img class="card_image" src="images/Amenities/Spa/sauna_2_web.jpg" alt="Sauna">
+                    <img class="card_image" src="images/Amenities/Spa/sauna_2_web.jpg" alt="Sauna" width="2000" height="1333" loading="lazy" decoding="async">
                 </figure>
             </section>
             <section class="card" id="events">
@@ -164,7 +255,7 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img class="card_image" src="images/Events/Wedding/wedding_1_web.jpg" alt="Wedding at Hotel Monte">
+                    <img class="card_image" src="images/Events/Wedding/wedding_1_web.jpg" alt="Wedding at Hotel Monte" width="2000" height="1333" loading="lazy" decoding="async">
                 </figure>
             </section>
             <section class="card" id="gudauri">
@@ -175,7 +266,7 @@
                     </p>
                 </div>
                 <figure class="image_container">
-                    <img class="card_image" src="images/gudauri.jpg" alt="Gudauri mountains">
+                    <img class="card_image" src="images/gudauri.jpg" alt="Gudauri mountains" width="1200" height="630" loading="lazy" decoding="async">
                 </figure>
             </section>
             </article>
@@ -216,5 +307,6 @@
         </div>
     </footer>
     <script src="/language-switcher.js" defer></script>
+    <script src="/home-video.js" defer></script>
 </body>
 </html>
