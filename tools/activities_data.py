@@ -32,9 +32,9 @@ PLACES = [
     dict(
         id="pasanauri", area="a", ll=(42.3489, 44.6905), season="Y", hike=0, cost="M",
         name=("Pasanauri and Khinkali", "ფასანაური და ხინკალი", "Пасанаури и хинкали"),
-        desc=("A small town famous for khinkali, the Georgian dumplings, and dambalkhacho cheese. A classic lunch stop on the Military Road.",
-              "პატარა ქალაქი, რომელიც ხინკლითა და დამბალხაჭოთი არის ცნობილი. სამხედრო გზაზე კლასიკური გაჩერება სადილისთვის.",
-              "Небольшой город, известный хинкали и сыром дамбалхачо. Классическая остановка на обед на Военно-Грузинской дороге."),
+        desc=("A small town famous for khinkali, the Georgian dumplings, and dambalkhacho cheese. A classic lunch stop on the mountain road.",
+              "პატარა ქალაქი, რომელიც ხინკლითა და დამბალხაჭოთი არის ცნობილი. მთის გზაზე კლასიკური გაჩერება სადილისთვის.",
+              "Небольшой город, известный хинкали и сыром дамбалхачо. Классическая остановка на обед на горной дороге."),
         cost_note=("Free to visit; meals are paid.", "ვიზიტი უფასოა; საკვები ფასიანია.", "Посещение бесплатное; еда платная."),
     ),
     dict(
@@ -235,9 +235,9 @@ PLACES = [
     dict(
         id="jvari", area="g", ll=(42.50446, 44.45373), season="Y", hike=0, cost="F",
         name=("Jvari (Cross) Pass", "ჯვრის უღელტეხილი", "Крестовый перевал"),
-        desc=("The 2,379 m watershed summit of the Georgian Military Road, with an obelisk and sweeping mountain views.",
-              "სამხედრო გზის წყალგამყოფი მწვერვალი (2 379 მ), ობელისკითა და მთების ფართო ხედებით.",
-              "Водораздельная вершина Военно-Грузинской дороги на высоте 2379 м, с обелиском и широкими горными видами."),
+        desc=("The 2,379 m watershed summit of the mountain road, with an obelisk and sweeping mountain views.",
+              "მთის გზის წყალგამყოფი მწვერვალი (2 379 მ), ობელისკითა და მთების ფართო ხედებით.",
+              "Водораздельная вершина горной дороги на высоте 2379 м, с обелиском и широкими горными видами."),
         note=("The road can close for hours in heavy snow; check road conditions before you go.",
               "ძლიერი თოვლის დროს გზა შეიძლება საათობით დაიხუროს; გასვლამდე გზების მდგომარეობა შეამოწმეთ.",
               "При сильном снеге дорога может закрываться на несколько часов; перед поездкой проверьте её состояние."),
