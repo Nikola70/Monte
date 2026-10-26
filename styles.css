@@ -1607,3 +1607,9 @@ footer .secondary_nav a.whatsapp_link {
         margin: 0 auto 10px;
     }
 }
+
+/* LOGO LINKS TO THE HOME PAGE */
+
+a.logo_link {
+    display: block;
+}
