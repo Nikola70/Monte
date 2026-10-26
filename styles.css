@@ -317,7 +317,10 @@ header img {
 /* Below 630px the menu button and language selector sit on top of the logo, so push it down */
 @media screen and (max-width: 629px) {
     header img {
-        margin-top: 44px;
+        display: block;
+        width: 55%;
+        max-width: 240px;
+        margin: 44px auto 0;
     }
 }
 
@@ -1593,4 +1596,14 @@ a.whatsapp_link {
 
 footer .secondary_nav a.whatsapp_link {
     color: #25D366;
+}
+
+/* RESERVATION BUTTON BELOW THE LOGO WHILE THERE IS NOT ENOUGH ROOM BESIDE IT */
+
+@media screen and (min-width: 630px) and (max-width: 879px) {
+    .make_reservation:any-link {
+        position: static;
+        width: fit-content;
+        margin: 0 auto 10px;
+    }
 }
