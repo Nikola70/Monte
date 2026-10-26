@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Page Not Found | Hotel Monte Gudauri</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/logo_monte_697_331.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <section class="header_line">
+        <a class="logo_link" href="/" data-home><img src="/images/logo_monte_697_331.png" alt="Hotel Monte Logo"></a>
+        <a class="make_reservation" href="/contact" data-path="contact" data-i18n="reserve">Make A Reservation</a>
+    </section>
+</header>
+    <main>
+        <article class="error_page">
+            <section class="initial_card error_card">
+                <p class="error_code" aria-hidden="true">404</p>
+                <h1 data-i18n="title">This page has wandered off the trail</h1>
+                <p data-i18n="text">The page you are looking for does not exist or has moved. Your mountain stay is still waiting for you, so why not book a room at Hotel Monte?</p>
+                <div class="error_actions">
+                    <a href="/contact" data-path="contact" data-i18n="reserve_long">Reserve a room</a>
+                    <a href="/" data-home data-i18n="home">Back to the home page</a>
+                </div>
+                <ul class="error_links">
+                    <li><a href="/rooms" data-path="rooms" data-i18n="rooms">Rooms</a></li>
+                    <li><a href="/restaurant" data-path="restaurant" data-i18n="dining">Dining</a></li>
+                    <li><a href="/services" data-path="services" data-i18n="facilities">Facilities</a></li>
+                    <li><a href="/gudauri" data-path="gudauri" data-i18n="things">Things to Do</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <h3 data-i18n="contact_info">Our Contact Information:</h3>
+        <section class="social_media">
+            <a href="https://www.facebook.com/Montegudauri" target="_blank" aria-label="Facebook">
+                <svg class="icon" aria-hidden="true"><use href="/icons.svg#facebook"></use></svg>
+            </a>
+            <a href="https://www.instagram.com/monte.gudauri/#" target="_blank" aria-label="Instagram">
+                <svg class="icon" aria-hidden="true"><use href="/icons.svg#instagram"></use></svg>
+            </a>
+        </section>
+        <nav class="secondary_nav">
+            <ul>
+                <li><a class="whatsapp_link" href="https://wa.me/995574080202" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="/icons.svg#whatsapp"></use></svg></a> <a href="tel: +995 574 080 202">+995 574 080 202</a></li>
+                <li><a href="tel: +995 574 161 010">✆ +995 574 161 010</a></li>
+                <li><a href="mailto: info@montegudauri.com">📧 info@montegudauri.com</a></li>
+                <li><a href="mailto: montegudauri@gmail.com">📧 montegudauri@gmail.com</a></li>
+                <li><a href="https://maps.app.goo.gl/Zi5YPahn9ju6hiJY8" target="_blank" rel="noopener noreferrer">🗺 <span data-i18n="location">Location: Georgia, Gudauri</span></a></li>
+            </ul>
+        </nav>
+        <p>&copy; <span data-i18n="copyright">Hotel Monte. All Rights Reserved.</span></p>
+    </footer>
+    <script>
+    // GitHub Pages serves this page for any unknown address, so everything uses absolute links.
+    // The text switches to Georgian or Russian when the missing address starts with /ka/ or /ru/.
+    (function () {
+        var T = {
+            ka: {
+                title: 'ეს გვერდი ბილიკს ასცდა',
+                text: 'გვერდი, რომელსაც ეძებთ, არ არსებობს ან გადატანილია. თქვენი მთის დასვენება კი თქვენ გელოდებათ, ასე რომ, დაჯავშნეთ ნომერი სასტუმრო მონტეში.',
+                reserve: 'დაჯავშნა', reserve_long: 'ნომრის დაჯავშნა', home: 'მთავარ გვერდზე დაბრუნება',
+                rooms: 'ნომრები', dining: 'რესტორანი', facilities: 'სერვისები', things: 'აქტივობები',
+                contact_info: 'ჩვენი საკონტაქტო ინფორმაცია:', location: 'მდებარეობა: საქართველო, გუდაური',
+                copyright: 'სასტუმრო მონტე. ყველა უფლება დაცულია.', pageTitle: 'გვერდი ვერ მოიძებნა | სასტუმრო მონტე გუდაური'
+            },
+            ru: {
+                title: 'Эта страница сошла с тропы',
+                text: 'Страница, которую вы ищете, не существует или была перенесена. Ваш отдых в горах всё ещё ждёт вас, так почему бы не забронировать номер в отеле Monte?',
+                reserve: 'Забронировать', reserve_long: 'Забронировать номер', home: 'Вернуться на главную',
+                rooms: 'Номера', dining: 'Ресторан', facilities: 'Услуги', things: 'Чем заняться',
+                contact_info: 'Наши контакты:', location: 'Расположение: Грузия, Гудаури',
+                copyright: 'Отель Monte. Все права защищены.', pageTitle: 'Страница не найдена | Отель Monte Гудаури'
+            }
+        };
+        var m = location.pathname.match(/^\/(ka|ru)(\/|$)/);
+        var lang = m ? m[1] : 'en';
+        var prefix = m ? '/' + lang : '';
+        document.querySelectorAll('[data-home]').forEach(function (a) { a.setAttribute('href', prefix + '/'); });
+        document.querySelectorAll('[data-path]').forEach(function (a) { a.setAttribute('href', prefix + '/' + a.getAttribute('data-path')); });
+        if (lang === 'en') return;
+        document.documentElement.lang = lang;
+        document.title = T[lang].pageTitle;
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var v = T[lang][el.getAttribute('data-i18n')];
+            if (v) el.textContent = v;
+        });
+    })();
+    </script>
+</body>
+</html>
