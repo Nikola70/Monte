@@ -1559,32 +1559,23 @@ div.flatpickr-calendar {
     display: block;
     width: fit-content;
     margin: 1.4rem auto 0.5rem;
-    padding: 0.65rem 2rem;
-    border: 2px solid var(--SECONDARY-COLOR);
+    padding: 5px 1.2rem;
+    border: 4px solid var(--BORDER-COLOR);
     border-radius: 999px;
-    background-color: var(--BACKGROUND-COLOR);
     color: var(--FONT-COLOR);
-    font-weight: 700;
-    letter-spacing: 0.03em;
+    font-size: 1.2rem;
+    font-weight: bolder;
     text-align: center;
-    transition: background-color 0.2s;
 }
 
 .card a.room_reserve:hover,
 .card a.room_reserve:focus-visible {
     opacity: 1;
-    background-color: var(--SECONDARY-COLOR);
 }
 
 .card a.room_reserve:focus-visible {
-    outline: 2px solid var(--PRIMARY-COLOR);
+    outline: 2px solid var(--SECONDARY-COLOR);
     outline-offset: 3px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card a.room_reserve {
-        transition: none;
-    }
 }
 
 /* WHATSAPP ICON NEXT TO THE PHONE NUMBER */
