@@ -1105,7 +1105,13 @@ div.flatpickr-calendar {
 
 /* THINGS TO DO PAGE (/gudauri) */
 
-.things_card p {
+.things_card p,
+.about_card p,
+.rooms_card p,
+.restaurant_card p,
+.services_card p,
+.events_card p,
+.contact_card p {
     max-width: 62rem;
     margin-left: auto;
     margin-right: auto;
