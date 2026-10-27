@@ -30,7 +30,10 @@ def last_commit_date(path):
         files = [l.strip() for l in lines[1:] if l.strip()]
         if path in files and len(files) < SITEWIDE:
             return lines[0].split()[1]
-    return ""
+    # a page whose only commits are site-wide (e.g. a brand-new page): use the date it was added
+    added = subprocess.run(["git", "log", "--diff-filter=A", "--format=%cs", "--", path],
+                           capture_output=True, text=True, check=True).stdout.split()
+    return added[-1] if added else ""
 
 
 raw = open("sitemap.xml", "rb").read().decode("utf-8")
