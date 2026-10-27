@@ -1829,3 +1829,114 @@ a.logo_link {
     color: var(--FONT-COLOR);
     font-weight: 700;
 }
+
+/* FAQ PAGE */
+
+.faq_item {
+    border-bottom: 1px solid var(--BORDER-COLOR);
+}
+
+.faq_item summary {
+    position: relative;
+    padding: 0.9rem 2rem 0.9rem 0;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--PRIMARY-COLOR);
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq_item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq_item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0.3rem;
+    top: 0.55rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--SECONDARY-COLOR);
+}
+
+.faq_item[open] summary::after {
+    content: "\2212";
+}
+
+.faq_item summary:hover,
+.faq_item summary:focus-visible {
+    color: var(--SECONDARY-COLOR);
+}
+
+.faq_item p {
+    margin: 0 0 1rem;
+    padding-right: 1.5rem;
+}
+
+.faq_item a {
+    color: var(--PRIMARY-COLOR);
+    text-decoration: underline;
+}
+
+.faq_item a:hover,
+.faq_item a:focus {
+    transform: none;
+}
+
+.faq_group {
+    margin-top: 1.5rem;
+    border-top: 3px solid var(--BORDER-COLOR);
+}
+
+.faq_group > summary {
+    position: relative;
+    padding: 1rem 2.5rem 0.4rem 0;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq_group > summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq_group > summary::after {
+    content: "+";
+    position: absolute;
+    right: 0.3rem;
+    top: 0.7rem;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--SECONDARY-COLOR);
+}
+
+.faq_group[open] > summary::after {
+    content: "\2212";
+}
+
+.faq_group > summary h2 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+}
+
+.faq_group > summary:hover h2,
+.faq_group > summary:focus-visible h2 {
+    color: var(--SECONDARY-COLOR);
+}
+
+.faq_hint {
+    margin-top: 1rem;
+}
+
+.faq_hint a {
+    color: var(--PRIMARY-COLOR);
+    text-decoration: underline;
+}
+
+.faq_hint a:hover,
+.faq_hint a:focus {
+    transform: none;
+    color: var(--SECONDARY-COLOR);
+}
