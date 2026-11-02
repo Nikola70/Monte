@@ -1300,7 +1300,9 @@ div.flatpickr-calendar {
     flex-wrap: wrap;
     gap: 0.6rem 1.5rem;
     align-items: center;
-    margin: 1.5rem 1rem 0.5rem;
+    width: calc(100% - 2rem);
+    max-width: 1368px;
+    margin: 1.5rem auto 0.5rem;
     padding: 0.8rem 1rem;
     border: 2px solid var(--BORDER-COLOR);
     border-radius: 12px;
@@ -1944,7 +1946,9 @@ a.logo_link {
 /* EXAMPLE DAY TRIP (Things to Do) */
 
 .act_trip {
-    margin: 1.5rem 1rem 0.5rem;
+    width: calc(100% - 2rem);
+    max-width: 1368px;
+    margin: 1.5rem auto 0.5rem;
     border: 2px solid var(--BORDER-COLOR);
     border-radius: 12px;
     background-color: #f7efe5;
