@@ -1940,3 +1940,80 @@ a.logo_link {
     transform: none;
     color: var(--SECONDARY-COLOR);
 }
+
+/* EXAMPLE DAY TRIP (Things to Do) */
+
+.act_trip {
+    margin: 1.5rem 1rem 0.5rem;
+    border: 2px solid var(--BORDER-COLOR);
+    border-radius: 12px;
+    background-color: #f7efe5;
+    text-align: left;
+}
+
+.act_trip > summary {
+    position: relative;
+    padding: 0.9rem 3rem 0.9rem 1.2rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.act_trip > summary::-webkit-details-marker {
+    display: none;
+}
+
+.act_trip > summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--SECONDARY-COLOR);
+}
+
+.act_trip[open] > summary::after {
+    content: "\2212";
+}
+
+.act_trip h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1.4rem;
+}
+
+.act_trip > summary:hover h2,
+.act_trip > summary:focus-visible h2 {
+    color: var(--SECONDARY-COLOR);
+}
+
+.act_trip .act_trip_meta {
+    display: block;
+    font-weight: 700;
+    color: var(--PRIMARY-COLOR);
+}
+
+.act_trip_list {
+    margin: 0 1.2rem 1rem 2.6rem;
+    line-height: 1.6;
+}
+
+.act_trip_list li {
+    margin-bottom: 0.3rem;
+}
+
+.act_trip_list a {
+    font-weight: 700;
+    color: var(--PRIMARY-COLOR);
+    text-decoration: underline;
+}
+
+.act_trip_list a:hover,
+.act_trip_list a:focus {
+    transform: none;
+    color: var(--SECONDARY-COLOR);
+}
+
+.act_trip .act_trip_map {
+    margin: 0 1.2rem 1rem;
+}

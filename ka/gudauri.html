@@ -123,6 +123,23 @@
                 <button type="button" class="act_reset" id="act_reset">ფილტრების გასუფთავება</button>
             </div>
             </section>
+            <details class="act_trip" id="act_trip">
+                <summary>
+                    <h2>ერთდღიანი მარშრუტის მაგალითი: ყაზბეგისკენ მიმავალი გზა</h2>
+                    <span class="act_trip_meta">სავარაუდო ჯამური დრო: დაახლოებით 8 საათი (დაახლოებით 100 კმ, ფეხით სიარული მინიმალურია ან საერთოდ არ არის).</span>
+                </summary>
+                <ol class="act_trip_list">
+                    <li><a href="#monument">მეგობრობის მონუმენტი</a>: კლდის პირას მდგარი ძეგლი კერამიკული მოზაიკით ღრმა ხეობის თავზე.</li>
+                    <li><a href="#jvari">ჯვრის უღელტეხილი</a> და <a href="#travertine">ჯვრის უღელტეხილის ტრავერტინები</a>: 2 379 მ სიმაღლის მწვერვალი ობელისკით, შემდეგ გზის პირას მინერალური წყაროს ტერასები.</li>
+                    <li><a href="#sno">სნოს ქვის თავები</a>: ადგილობრივი მოქანდაკის მიერ გამოკვეთილი გრანიტის თავები.</li>
+                    <li><a href="#sno-castle">სნოს ციხე</a>: მე-16–17 საუკუნეების ციხესიმაგრე იმავე სოფელში.</li>
+                    <li><a href="#gergeti">გერგეტის სამების ეკლესია</a>: მე-14 საუკუნის ეკლესია, რომელიც მყინვარწვერის ხედით არის ცნობილი.</li>
+                    <li><a href="#gveleti">გველეთის ჩანჩქერები</a>: ორი ჩანჩქერი, რომლებამდე მისასვლელად მოკლე ლაშქრობაა საჭირო.</li>
+                    <li><a href="#dariali-monastery">დარიალის მონასტერი</a>: მოქმედი მონასტერი ხეობაში, საზღვართან ახლოს, სადაც რუსეთის საზღვარიც არის.</li>
+                    <li>დაბრუნება სასტუმროში</li>
+                </ol>
+                <p class="act_trip_map"><a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.4767341,44.4759827&amp;travelmode=driving&amp;waypoints=42.4921171,44.452807%7C42.50446,44.45373%7C42.5317285,44.4714479%7C42.6072,44.6322%7C42.6053547,44.6384798%7C42.6622002,44.6202573%7C42.7048152,44.6141445%7C42.7355,44.6314" target="_blank" rel="noopener noreferrer">მთლიანი მარშრუტის გახსნა Google Maps-ში</a></p>
+            </details>
             <p class="act_count" id="act_count" role="status" aria-live="polite">ნაჩვენებია 33 ადგილი 33-დან</p>
             <p class="act_empty" id="act_empty" hidden>ამ ფილტრებს არცერთი ადგილი არ შეესაბამება. სცადეთ გასუფთავება.</p>
             <ul class="act_grid" id="act_grid">
@@ -398,7 +415,7 @@
                 <p class="act_info"><strong>ფასი:</strong> ვიზიტი უფასოა; პარკინგი შეიძლება ფასიანი იყოს.</p>
                 <p class="act_info"><strong>სასარგებლო ინფორმაცია:</strong> სადამკვირვებლო აივნის მოაჯირი დაბალია: სიფრთხილე გამოიჩინეთ, განსაკუთრებით ბავშვებთან ერთად. სეზონის მიხედვით აქ ცხენით გასეირნებაც შეიძლება იყოს შესაძლებელი.</p>
                 <p class="act_links">
-                    <a class="act_link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42.4767341,44.4759827&amp;destination=42.49227,44.4529&amp;travelmode=driving" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: მეგობრობის მონუმენტი">მარშრუტი მონტედან</a>
+                    <a class="act_link" href="https://www.google.com/maps/dir/42.4767341,44.4759827/%E1%83%92%E1%83%A3%E1%83%93%E1%83%90%E1%83%A3%E1%83%A0%E1%83%98%E1%83%A1+%E1%83%9E%E1%83%90%E1%83%9C%E1%83%9D%E1%83%A0%E1%83%90%E1%83%9B%E1%83%90/@42.4921171,44.452807,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x40452971c3651707:0xba5ef25a8941fbc!2m2!1d44.452807!2d42.4921171!3e0" target="_blank" rel="noopener" aria-label="მარშრუტი მონტედან: მეგობრობის მონუმენტი">მარშრუტი მონტედან</a>
                 </p>
             </li>
             <li class="act_card" id="sadzele" data-season="summer" data-hike="3" data-cost="mixed" data-km="0.0" data-name="მთა საძელე" data-order="17">
@@ -927,12 +944,12 @@
     "@type": "TouristAttraction",
     "name": "მეგობრობის მონუმენტი",
     "description": "1983 წლის ნახევრადწრიული მონუმენტი კერამიკული მოზაიკით, ღრმა ხეობის თავზე კლდის პირას, შთამბეჭდავი ხედებით.",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.49227,44.4529",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=42.4921171,44.452807",
     "image": "https://montegudauri.com/images/Places/monument.jpg",
     "geo": {
      "@type": "GeoCoordinates",
-     "latitude": 42.49227,
-     "longitude": 44.4529
+     "latitude": 42.4921171,
+     "longitude": 44.452807
     }
    }
   },

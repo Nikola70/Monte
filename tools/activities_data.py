@@ -220,7 +220,7 @@ PLACES = [
                    "Бесплатно; билет на подъёмник — отдельно, если вы им пользуетесь."),
     ),
     dict(
-        id="monument", area="g", ll=(42.49227, 44.4529), season="Y", hike=0, cost="M",
+        id="monument", area="g", ll=(42.4921171, 44.452807), map_url="https://www.google.com/maps/dir/42.4767341,44.4759827/%E1%83%92%E1%83%A3%E1%83%93%E1%83%90%E1%83%A3%E1%83%A0%E1%83%98%E1%83%A1+%E1%83%9E%E1%83%90%E1%83%9C%E1%83%9D%E1%83%A0%E1%83%90%E1%83%9B%E1%83%90/@42.4921171,44.452807,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x40452971c3651707:0xba5ef25a8941fbc!2m2!1d44.452807!2d42.4921171!3e0", season="Y", hike=0, cost="M",
         name=("Friendship Monument", "მეგობრობის მონუმენტი", "Монумент дружбы"),
         desc=("A 1983 semicircular monument with a ceramic mosaic, standing on a cliff edge above a deep gorge with dramatic views.",
               "1983 წლის ნახევრადწრიული მონუმენტი კერამიკული მოზაიკით, ღრმა ხეობის თავზე კლდის პირას, შთამბეჭდავი ხედებით.",

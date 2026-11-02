@@ -157,6 +157,76 @@ def map_links(p):
     return view, directions
 
 
+TRIP = {
+    "h": ("Example day trip: along the road to Kazbegi",
+          "ერთდღიანი მარშრუტის მაგალითი: ყაზბეგისკენ მიმავალი გზა",
+          "Пример поездки на один день: по дороге в Казбеги"),
+    "meta": ("Total estimated time: about 8 hours (about 100 km, little to no walking).",
+             "სავარაუდო ჯამური დრო: დაახლოებით 8 საათი (დაახლოებით 100 კმ, ფეხით სიარული მინიმალურია ან საერთოდ არ არის).",
+             "Ориентировочное общее время: около 8 часов (около 100 км, пешком почти не нужно)."),
+    "and": (" and ", " და ", " и "),
+    "map": ("Open the whole route in Google Maps", "მთლიანი მარშრუტის გახსნა Google Maps-ში", "Открыть весь маршрут в Google Maps"),
+    "back": ("Back to the hotel", "დაბრუნება სასტუმროში", "Возвращение в отель"),
+    # (place ids, description)
+    "stops": [
+        (("monument",), ("A cliff-edge monument with a ceramic mosaic above a deep gorge.",
+                         "კლდის პირას მდგარი ძეგლი კერამიკული მოზაიკით ღრმა ხეობის თავზე.",
+                         "Монумент на краю скалы с керамической мозаикой над глубоким ущельем.")),
+        (("jvari", "travertine"), ("The 2,379 m summit with an obelisk, then the mineral-spring terraces beside the road.",
+                                   "2 379 მ სიმაღლის მწვერვალი ობელისკით, შემდეგ გზის პირას მინერალური წყაროს ტერასები.",
+                                   "Вершина перевала на высоте 2379 м с обелиском, затем террасы минерального источника у дороги.")),
+        (("sno",), ("Granite heads carved by a local sculptor.",
+                    "ადგილობრივი მოქანდაკის მიერ გამოკვეთილი გრანიტის თავები.",
+                    "Гранитные головы, вырезанные местным скульптором.")),
+        (("sno-castle",), ("A 16th to 17th-century fortress in the same village.",
+                           "მე-16–17 საუკუნეების ციხესიმაგრე იმავე სოფელში.",
+                           "Крепость XVI–XVII веков в той же деревне.")),
+        (("gergeti",), ("A 14th-century church famous for its view of Mount Kazbek.",
+                        "მე-14 საუკუნის ეკლესია, რომელიც მყინვარწვერის ხედით არის ცნობილი.",
+                        "Церковь XIV века, знаменитая видом на гору Казбек.")),
+        (("gveleti",), ("Two waterfalls reached by a short hike.",
+                        "ორი ჩანჩქერი, რომლებამდე მისასვლელად მოკლე ლაშქრობაა საჭირო.",
+                        "Два водопада, к которым нужно совершить короткий поход.")),
+        (("dariali-monastery",), ("A working monastery in the gorge near the border, where you will also find the border with Russia.",
+                                  "მოქმედი მონასტერი ხეობაში, საზღვართან ახლოს, სადაც რუსეთის საზღვარიც არის.",
+                                  "Действующий монастырь в ущелье у границы, где находится и граница с Россией.")),
+        ("back", None),
+    ],
+}
+
+
+def trip_section(lang):
+    i = IDX[lang]
+    names = {p["id"]: p["name"][i] for p in PLACES}
+    rows = []
+    for ids, desc in TRIP["stops"]:
+        if isinstance(ids, str):
+            rows.append("                    <li>%s</li>" % esc(TRIP[ids][i]))
+            continue
+        links = TRIP["and"][i].join('<a href="#%s">%s</a>' % (x, esc(names[x])) for x in ids)
+        text = desc[i][0].lower() + desc[i][1:] if lang in ("en", "ru") else desc[i]
+        rows.append("                    <li>%s: %s</li>" % (links, esc(text)))
+    wp = []
+    for ids, _ in TRIP["stops"]:
+        if not isinstance(ids, str):
+            for x in ids:
+                place = next(q for q in PLACES if q["id"] == x)
+                wp.append("%s,%s" % place["ll"])
+    route = ("https://www.google.com/maps/dir/?api=1&origin=%s,%s&destination=%s,%s&travelmode=driving&waypoints=%s" % (
+        HOTEL[0], HOTEL[1], HOTEL[0], HOTEL[1], "%7C".join(wp)))
+    route_p = ('                <p class="act_trip_map"><a class="act_link" href="%s" target="_blank" rel="noopener noreferrer">%s</a></p>\n'
+               % (esc(route), esc(TRIP["map"][i])))
+    return (
+        '            <details class="act_trip" id="act_trip">\n'
+        '                <summary>\n'
+        '                    <h2>%s</h2>\n'
+        '                    <span class="act_trip_meta">%s</span>\n'
+        '                </summary>\n'
+        '                <ol class="act_trip_list">\n%s\n                </ol>\n'
+        '%s'
+        '            </details>\n') % (esc(TRIP["h"][i]), esc(TRIP["meta"][i]), "\n".join(rows), route_p)
+
+
 def card(p, lang, order):
     i = IDX[lang]
     d = DIST[p["id"]]
@@ -310,6 +380,7 @@ def build_main(lang):
         '            <section class="act_controls" id="act_controls" aria-label="%s" data-total="%d" data-count="%s" hidden>\n'
         '%s\n'
         '            </section>\n'
+        '%s'
         '            <p class="act_count" id="act_count" role="status" aria-live="polite">%s</p>\n'
         '            <p class="act_empty" id="act_empty" hidden>%s</p>\n'
         '            <ul class="act_grid" id="act_grid">\n'
@@ -320,7 +391,7 @@ def build_main(lang):
         '        </article>\n'
         '    </main>'
     ) % (esc(u("h1", lang)), esc(u("intro1", lang)), esc(u("intro2", lang)), esc(u("notice", lang)),
-         esc(u("filters_aria", lang)), total, esc(u("count", lang)), controls(lang, total),
+         esc(u("filters_aria", lang)), total, esc(u("count", lang)), controls(lang, total), trip_section(lang),
          esc(count0), esc(u("empty", lang)), cards, credits(lang, places), jsonld(lang, places))
 
 
